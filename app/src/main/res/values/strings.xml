@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Appliance Identity -->
+    <string name="app_name">Nour Alwelayah</string>
+    <string name="app_name_ar">نور الولاية</string>
+    <string name="kiosk_initializing">Initializing Hardware Engine...</string>
+
+    <!-- Hijri Months & Era -->
+    <string name="hijri_era_suffix">AH</string>
+    <string-array name="hijri_months">
+        <item>Muharram</item>
+        <item>Safar</item>
+        <item>Rabi al-Awwal</item>
+        <item>Rabi al-Thani</item>
+        <item>Jumada al-Awwal</item>
+        <item>Jumada al-Thani</item>
+        <item>Rajab</item>
+        <item>Sha\'ban</item>
+        <item>Ramadan</item>
+        <item>Shawwal</item>
+        <item>Dhu al-Qadah</item>
+        <item>Dhu al-Hijjah</item>
+    </string-array>
+
+    <!-- P4Tablet Bottom Navigation Tabs -->
+    <string name="tab_clock">Clock</string>
+    <string name="tab_prayer">Prayer</string>
+    <string name="tab_alarms">Alarms</string>
+    <string name="tab_player">Player</string>
+    <string name="tab_wifi">WiFi</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Clock Screen & Alerts -->
+    <string name="clock_am">AM</string>
+    <string name="clock_pm">PM</string>
+    <string name="clock_media_link">Media</string>
+    <string name="clock_set_location_prompt">Set your location in Settings (now: %1$s)</string>
+    <string name="clock_next_prayer_format">Next: %1$s at %2$s   (in %3$dh %4$sm)</string>
+    <string name="alert_snooze">Snooze</string>
+    <string name="alert_snooze_min">Snooze %1$d</string>
+
+    <!-- Prayer Names -->
+    <string name="prayer_fajr">Fajr</string>
+    <string name="prayer_sunrise">Sunrise</string>
+    <string name="prayer_dhuhr">Dhuhr</string>
+    <string name="prayer_asr">Asr</string>
+    <string name="prayer_sunset">Sunset</string>
+    <string name="prayer_maghrib">Maghrib</string>
+    <string name="prayer_next_prefix">Next:</string>
+
+    <!-- Prayer Tab -->
+    <string name="prayer_no_azan">no azan</string>
+    <string name="prayer_azan_toggle">Azan</string>
+    <string name="prayer_azan_sounds_header">Azan sounds - files in /azan</string>
+    <string name="prayer_add_sound">+ Add</string>
+    <string name="prayer_same_as_dhuhr">Same as Dhuhr</string>
+    <string name="prayer_default_alarm_sound">Default alarm sound</string>
+    <string name="prayer_azan_volume_label">Azan volume (0-21)</string>
+    <string name="prayer_start_early_label">Start azan early (0-500 s)</string>
+    <string name="prayer_method_angles">Method angles</string>
+    <string name="prayer_fajr_angle_label">Fajr angle (14.0 - 19.9)</string>
+    <string name="prayer_maghrib_angle_label">Maghrib angle (0.833 = sunset)</string>
+    <string name="prayer_azan_picture">Azan picture</string>
+    <string name="prayer_save_settings">💾  Save prayer settings</string>
+    <string name="prayer_saved_msg">Saved. Prayer times are updated.</string>
+
+    <!-- Alarms Tab & Editor -->
+    <string name="alarms_header_hint">Tap an alarm to edit it. Each alarm has its own sound and volume.</string>
+    <string name="alarms_active_count_format">%1$d of %2$d alarms on</string>
+    <string name="alarms_prev">◀ Prev</string>
+    <string name="alarms_next">Next ▶</string>
+    <string name="alarms_page_format">Page %1$d / %2$d</string>
+    <string name="alarms_default_title_format">Alarm %1$d</string>
+    <string name="alarms_editor_title_label">Title</string>
+    <string name="alarms_editor_when_label">When</string>
+    <string name="alarms_editor_repeat_label">Repeat on (none selected = ring once)</string>
+    <string name="alarms_editor_ramadan_only">Ramadan only (works with the days above)</string>
+    <string name="alarms_editor_specific_date">Specific date (ignores the days and Ramadan)</string>
+    <string name="alarms_editor_sound_label">Sound (tap to choose a file in the Nour Alwelayah folders)</string>
+    <string name="alarms_editor_volume_label">Volume for this alarm (0-21)</string>
+    <string name="alarms_editor_save">✓ Save</string>
+    <string name="alarms_editor_cancel">✕ Cancel</string>
+    <string name="alarms_editor_delete">🗑 Delete</string>
+
+    <!-- Player & Media Remote States -->
+    <string name="player_audios">Audios</string>
+    <string name="player_videos">Videos</string>
+    <string name="player_youtube">YouTube</string>
+    <string name="player_now_playing">Now playing</string>
+    <string name="player_stopped">Stopped</string>
+    <string name="player_ready_to_play">Ready to play on appliance</string>
+    <string name="player_volume">Volume</string>
+    <string name="player_appliance_volume">Appliance Volume</string>
+    <string name="player_open_media">Media player</string>
+    <string name="player_play">Play</string>
+    <string name="player_pause">Pause</string>
+    <string name="player_next">Next</string>
+    <string name="player_stop">Stop</string>
+    <string name="player_fullscreen_expand">Full</string>
+    <string name="player_fullscreen_minimize">ESC</string>
+    <string name="player_empty_folder">(empty folder)</string>
+    <string name="player_starting_retry">The player is starting - try again</string>
+    <string name="error_media_recovering">Media stream interrupted — returning to clock...</string>
+
+    <!-- Wi-Fi & Bluetooth Remote Tab -->
+    <string name="wifi_title">WiFi</string>
+    <string name="wifi_not_connected">Not connected</string>
+    <string name="wifi_connected">Connected</string>
+    <string name="wifi_connecting">Connecting...</string>
+    <string name="wifi_disconnected">Disconnected</string>
+    <string name="wifi_scanning">Scanning...</string>
+    <string name="wifi_settings_button">📶  WiFi settings</string>
+    <string name="wifi_bt_remote_title">Bluetooth remote</string>
+    <string name="wifi_refresh_button">⟳  Refresh</string>
+    <string name="wifi_no_router_title">No-router mode</string>
+    <string name="wifi_web_remote_title">Wi-Fi remote</string>
+    <string name="wifi_web_remote_on">Wi-Fi remote on</string>
+    <string name="wifi_no_connection">No Wi-Fi connection</string>
+    <string name="wifi_pin_label">PIN (4 - 8 digits, empty = none)</string>
+    <string name="wifi_save_pin">Save PIN</string>
+    <string name="wifi_manager_button">📶  Wi-Fi Network Manager</string>
+    <string name="wifi_manager_title">Wi-Fi Network Manager</string>
+    <string name="wifi_quick_panel_button">⚙  Quick Wi-Fi Panel</string>
+    <string name="wifi_ble_no_remotes">No remotes connected</string>
+    <string name="wifi_web_remote_header">Wi-Fi Web Remote</string>
+    <string name="wifi_web_remote_scan_hint">Scan with any phone or open on PC</string>
+
+    <!-- Settings Tab & Kiosk Section -->
+    <string name="settings_city_name">City name</string>
+    <string name="settings_list_button">☰  List</string>
+    <string name="settings_gps_button">⌖  GPS</string>
+    <string name="settings_online_button">⬇  Online</string>
+    <string name="settings_latitude">Latitude</string>
+    <string name="settings_longitude">Longitude</string>
+    <string name="settings_time_zone">Time zone</string>
+    <string name="settings_custom_utc">Custom UTC offset / zone</string>
+    <string name="settings_calc_method">Calculation method (Fajr / Maghrib angles)</string>
+    <string name="settings_hijri_adjust">Hijri date adjust (local moon sighting)</string>
+    <string name="settings_clock_picture">Clock picture</string>
+    <string name="settings_language_label">Language / اللغة:</string>
+    <string name="settings_24h_clock">24-hour clock</string>
+    <string name="settings_brightness">Brightness</string>
+    <string name="settings_auto">Auto</string>
+    <string name="settings_auto_checked">Auto ✓</string>
+    <string name="settings_auto_lock">Auto-lock</string>
+    <string name="settings_keep_screen_on">Keep screen on</string>
+    <string name="settings_save_button">💾  Save</string>
+    <string name="settings_saved_msg">Saved.</string>
+    <string name="settings_this_device">This device</string>
+    <string name="settings_bt_name_label">Bluetooth name:</string>
+    <string name="settings_bt_name_hint">Hardware Bluetooth identity broadcasted to the Nour Alwelayah companion remote.</string>
+    <string name="settings_clock_pictures_section">Clock pictures (tablet)</string>
+    <string name="settings_kiosk_section">Kiosk mode (appliance lockdown)</string>
+    <string name="settings_kiosk_refresh">Refresh status</string>
+    <string name="settings_maintainer_unlock">Maintainer Unlock</string>
+
+    <!-- Technician Admin Dashboard -->
+    <string name="admin_auth_title">Technician Authentication</string>
+    <string name="admin_auth_subtitle">Enter Technician PIN to unlock Nour Alwelayah Portal</string>
+    <string name="admin_auth_enter_pin">Enter PIN</string>
+    <string name="admin_auth_incorrect_pin">Incorrect Technician PIN</string>
+    <string name="admin_auth_cancel">Cancel</string>
+    <string name="admin_auth_unlock">Unlock</string>
+
+    <string name="admin_portal_title">Nour Alwelayah Technician Portal</string>
+    <string name="admin_portal_subtitle">On-Site Hardware Provisioning &amp; Kiosk Control • v2.0-appliance</string>
+    <string name="admin_close_exit">Close / Exit</string>
+
+    <string name="admin_language_title">Appliance Interface Language (Bilingual / RTL)</string>
+    <string name="admin_language_subtitle">Instantly switches the appliance UI language and LTR/RTL layout direction.</string>
+    <string name="admin_lang_en">English (LTR)</string>
+    <string name="admin_lang_ar">العربية (RTL)</string>
+    <string name="admin_lang_switched_en">Language switched to English (LTR).</string>
+    <string name="admin_lang_switched_ar">تم تغيير لغة الجهاز إلى العربية (RTL).</string>
+
+    <string name="admin_kiosk_title">Kiosk Master Lockdown</string>
+    <string name="admin_kiosk_subtitle">Toggle appliance Lock Task pinning and DevicePolicyManager restrictions. Toggling OFF invokes Kiosk.clear(context) so the tablet can be serviced normally.</string>
+    <string name="admin_kiosk_active">Kiosk Mode: ACTIVE (Appliance Locked)</string>
+    <string name="admin_kiosk_disabled">Kiosk Mode: DISABLED (Service / Maintenance Mode)</string>
+    <string name="admin_device_owner_yes">Device Owner Provisioned</string>
+    <string name="admin_device_owner_no">Standard Mode (Not Device Owner)</string>
+
+    <string name="admin_wifi_title">Wi-Fi Network Configurator</string>
+    <string name="admin_wifi_subtitle">Launches Android Wi-Fi Settings (whitelisted in KioskPolicy Lock Task packages).</string>
+    <string name="admin_wifi_panel">System Wi-Fi Panel</string>
+    <string name="admin_wifi_button">Configure Wi-Fi</string>
+
+    <string name="admin_ota_title">OTA Provisioning Server</string>
+    <string name="admin_ota_subtitle">Configure the remote endpoint URL for Nour Alwelayah firmware and media updates.</string>
+    <string name="admin_ota_label">OTA Server URL</string>
+    <string name="admin_ota_save">Save URL</string>
+
+    <string name="admin_volume_title">Hardware Volume Limiter</string>
+    <string name="admin_volume_subtitle" formatted="false">Restrict the maximum output volume percentage (0% – 100%) on this appliance.</string>
+    <string name="admin_volume_max_label" formatted="false">Max %</string>
+    <string name="admin_volume_apply">Apply</string>
+
+    <string name="admin_pin_title">Technician Access PIN &amp; Appliance Diagnostics</string>
+    <string name="admin_pin_subtitle">Update the 5-tap technician PIN (default: 9200) and inspect DevicePolicyManager state.</string>
+    <string name="admin_pin_label">Technician PIN</string>
+    <string name="admin_pin_update">Update PIN</string>
+
+    <!-- Voice Assistant Overlay -->
+    <string name="voice_mic_content_description">Voice Assistant</string>
+    <string name="voice_assistant_title">Voice Assistant</string>
+    <string name="voice_listening">Listening…</string>
+    <string name="voice_listening_hint">Speak in English or Arabic</string>
+    <string name="voice_processing">Processing…</string>
+    <string name="voice_speaking">Speaking</string>
+    <string name="voice_done_closing">Returning to clock…</string>
+    <string name="voice_recognized_query_label">Recognized</string>
+    <string name="voice_cancel">Cancel</string>
+    <string name="voice_stop_dismiss">Stop / Dismiss</string>
+    <string name="voice_dismiss">Dismiss</string>
+    <string name="voice_retry">Try Again</string>
+    <string name="voice_source_ref_label">Source</string>
+    <string name="voice_error_title">Voice Assistant</string>
+    <string name="voice_did_you_mean">Did you mean:</string>
+    <string name="voice_learned_badge">Learned phrase</string>
+    <string name="voice_listening_wake_word">Listening for Welayah</string>
+</resources>

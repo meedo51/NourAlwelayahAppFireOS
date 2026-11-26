@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_navy_bg">#041424</color>
+    <color name="ic_launcher_background">#041424</color>
+    <color name="brand_navy">#0c1823</color>
+    <color name="brand_gold">#cc9c56</color>
+    <color name="bg">#0c1823</color>
+    <color name="accent">#cc9c56</color>
+</resources>

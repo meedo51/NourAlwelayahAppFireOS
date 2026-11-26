@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main appliance theme -->
+    <style name="Theme.NourAlwelayah" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/brand_navy</item>
+        <item name="android:colorBackground">@color/brand_navy</item>
+        <item name="android:statusBarColor">@color/brand_navy</item>
+        <item name="android:navigationBarColor">@color/brand_navy</item>
+    </style>
+
+    <!-- Android 12+ (API 31+) Splash Screen Theme -->
+    <style name="Theme.NourAlwelayah.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/brand_navy_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Theme.NourAlwelayah</item>
+        <item name="android:windowSplashScreenBackground">@color/brand_navy_bg</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+    </style>
+</resources>

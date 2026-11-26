@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nour Alwelayah Smart Appliance — User Manual | دليل المستخدم لجهاز نور الولاية الذكي</title>
+<style>
+  /* ==========================================================================
+     Nour Alwelayah Smart Appliance — Print-Ready Retail User Manual Stylesheet
+     Designed for crisp A5 In-Box Booklet or A4 Print via Chrome/Edge Ctrl+P
+     ========================================================================== */
+  :root {
+    --navy: #0C1823;
+    --navy-mid: #162B3E;
+    --gold: #A9792E;
+    --gold-bright: #CC9C56;
+    --gold-soft: #FBF6EC;
+    --gold-border: #DFC38C;
+    --ink: #1C252E;
+    --ink-muted: #4A5A6A;
+    --surface: #FFFFFF;
+    --surface-alt: #F6F8FA;
+    --border: #D9E1E8;
+    --teal: #1E6B7B;
+    --teal-soft: #EFF7F9;
+    --danger-bg: #FDF4F4;
+    --danger-border: #E7B9B9;
+    --font-ar: 'Tajawal', 'Cairo', 'Noto Kufi Arabic', 'Segoe UI', Tahoma, Arial, sans-serif;
+    --font-en: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #E8EDF2;
+    color: var(--ink);
+    font-size: 9.4pt;
+    line-height: 1.55;
+  }
+
+  /* Screen preview toolbar (strictly hidden during print) */
+  .print-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy);
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 2px solid var(--gold-bright);
+    font-family: var(--font-en);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+  }
+  .print-toolbar .brand-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--gold-bright);
+  }
+  .print-toolbar .toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .print-toolbar button {
+    border: 1px solid var(--gold-bright);
+    background: transparent;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .print-toolbar button:hover {
+    background: rgba(204, 156, 86, 0.22);
+  }
+  .print-toolbar button.active {
+    background: var(--gold-bright);
+    color: var(--navy);
+  }
+  .print-toolbar button.primary-print {
+    background: var(--gold-bright);
+    color: var(--navy);
+    font-weight: 700;
+    padding: 7px 16px;
+  }
+  .print-toolbar button.primary-print:hover {
+    background: #DBAE6B;
+  }
+
+  /* Booklet Container on Screen */
+  .manual-book {
+    width: 148mm;
+    max-width: 100%;
+    margin: 22px auto 48px auto;
+    background: var(--surface);
+    box-shadow: 0 12px 36px rgba(12, 24, 35, 0.18);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  body.layout-a4 .manual-book {
+    width: 210mm;
+  }
+
+  /* Section & Language Wrappers */
+  .lang-section {
+    padding: 12mm 12mm 14mm 12mm;
+  }
+  .lang-ar {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--font-ar);
+  }
+  .lang-en {
+    direction: ltr;
+    text-align: left;
+    font-family: var(--font-en);
+  }
+
+  /* Cover Pages */
+  .cover-page {
+    background: var(--navy);
+    color: #FFFFFF;
+    min-height: 196mm;
+    padding: 16mm 14mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 4px solid var(--gold-bright);
+  }
+  body.layout-a4 .cover-page {
+    min-height: 270mm;
+    padding: 24mm 20mm;
+  }
+  .cover-frame {
+    border: 1.5pt solid rgba(204, 156, 86, 0.55);
+    border-radius: 10px;
+    padding: 14mm 10mm;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  .cover-emblem {
+    width: 82px;
+    height: 82px;
+    margin-bottom: 10px;
+  }
+  .cover-kicker {
+    font-size: 9pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .cover-title-ar {
+    font-family: var(--font-ar);
+    font-size: 24pt;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 4px 0 6px 0;
+    line-height: 1.25;
+  }
+  .cover-subtitle-ar {
+    font-family: var(--font-ar);
+    font-size: 12pt;
+    color: var(--gold-bright);
+    font-weight: 600;
+    margin: 0 0 18px 0;
+  }
+  .cover-divider {
+    width: 68px;
+    height: 2px;
+    background: var(--gold-bright);
+    margin: 12px auto 16px auto;
+  }
+  .cover-title-en {
+    font-family: var(--font-en);
+    font-size: 20pt;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 4px 0 4px 0;
+    letter-spacing: 0.3px;
+  }
+  .cover-subtitle-en {
+    font-family: var(--font-en);
+    font-size: 10.5pt;
+    color: var(--gold-bright);
+    font-weight: 600;
+    margin: 0;
+  }
+  .cover-pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: 100%;
+    margin: 18px 0;
+    padding: 10px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(204, 156, 86, 0.3);
+    border-radius: 8px;
+  }
+  .cover-pillar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 7.5pt;
+    color: #DCE5EE;
+  }
+  .cover-pillar svg {
+    width: 22px;
+    height: 22px;
+    color: var(--gold-bright);
+  }
+  .cover-footer {
+    font-size: 8.5pt;
+    color: #B6C5D4;
+    border-top: 1px solid rgba(204, 156, 86, 0.35);
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* Section Banner (Arabic Start / English Start) */
+  .edition-banner {
+    background: var(--navy);
+    color: #FFFFFF;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-inline-start: 5px solid var(--gold-bright);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .edition-banner h1 {
+    margin: 0;
+    font-size: 14.5pt;
+    color: #FFFFFF;
+    line-height: 1.3;
+  }
+  .edition-banner p {
+    margin: 3px 0 0 0;
+    font-size: 8.5pt;
+    color: var(--gold-bright);
+  }
+
+  /* Headings */
+  .chapter {
+    margin-top: 16px;
+    margin-bottom: 14px;
+  }
+  .chapter-header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border-bottom: 1.5pt solid var(--gold-bright);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .chapter-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: var(--navy);
+    color: var(--gold-bright);
+    font-weight: 800;
+    font-size: 9.5pt;
+    flex-shrink: 0;
+  }
+  .chapter-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  h2 {
+    margin: 0;
+    font-size: 12.2pt;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.3;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  h3 {
+    margin: 10px 0 5px 0;
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--navy-mid);
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  p {
+    margin: 0 0 7px 0;
+  }
+
+  /* UI Label Chips matching real screen buttons/tabs */
+  .ui-label {
+    display: inline-block;
+    background: var(--surface-alt);
+    border: 0.75pt solid #C3D0DC;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 8.4pt;
+    padding: 1px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .wake-pill {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--gold-bright);
+    font-weight: 700;
+    font-size: 8.6pt;
+    padding: 1.5px 8px;
+    border-radius: 999px;
+    border: 0.75pt solid var(--gold-bright);
+  }
+
+  /* Cards & Grids */
+  .box-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .box-item {
+    background: var(--surface-alt);
+    border: 0.8pt solid var(--border);
+    border-top: 2.5pt solid var(--gold-bright);
+    border-radius: 7px;
+    padding: 9px 7px;
+    text-align: center;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .box-item svg {
+    width: 30px;
+    height: 30px;
+    color: var(--navy);
+    margin-bottom: 5px;
+  }
+  .box-item .item-title {
+    font-weight: 700;
+    font-size: 8.6pt;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+  .box-item .item-desc {
+    font-size: 7.7pt;
+    color: var(--ink-muted);
+    line-height: 1.38;
+  }
+
+  /* Quick Start 3-Step Flow */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .step-card {
+    background: #FFFFFF;
+    border: 0.8pt solid var(--border);
+    border-radius: 7px;
+    padding: 8px;
+    position: relative;
+  }
+  .step-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 7.6pt;
+    padding: 1px 7px;
+    border-radius: 999px;
+    margin-bottom: 4px;
+  }
+  .step-card h4 {
+    margin: 0 0 4px 0;
+    font-size: 8.8pt;
+    color: var(--navy);
+  }
+  .step-card p {
+    margin: 0;
+    font-size: 7.9pt;
+    color: var(--ink-muted);
+    line-height: 1.4;
+  }
+
+  /* Callout Boxes */
+  .callout {
+    background: var(--gold-soft);
+    border: 0.8pt solid var(--gold-border);
+    border-inline-start: 3.5pt solid var(--gold);
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin: 8px 0 10px 0;
+    font-size: 8.5pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .callout strong {
+    color: var(--navy);
+  }
+  .callout-teal {
+    background: var(--teal-soft);
+    border-color: #B4D7DF;
+    border-inline-start-color: var(--teal);
+  }
+  .callout-safety {
+    background: var(--danger-bg);
+    border-color: var(--danger-border);
+    border-inline-start-color: #B84242;
+  }
+
+  /* Feature Cards (Tabs Walkthrough) */
+  .tab-card {
+    border: 0.8pt solid var(--border);
+    border-radius: 7px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    background: #FFFFFF;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .tab-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 0.6pt solid #E6ECF1;
+  }
+  .tab-card-title {
+    font-weight: 800;
+    font-size: 9.4pt;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tab-pill {
+    font-size: 7.4pt;
+    font-weight: 700;
+    color: var(--gold);
+    background: var(--gold-soft);
+    border: 0.6pt solid var(--gold-border);
+    border-radius: 4px;
+    padding: 1px 6px;
+  }
+  .tab-card ul {
+    margin: 4px 0 0 0;
+    padding-inline-start: 16px;
+  }
+  .tab-card li {
+    margin-bottom: 3px;
+    font-size: 8.5pt;
+  }
+
+  /* Standard Lists */
+  ul.clean-list, ol.clean-list {
+    margin: 5px 0 9px 0;
+    padding-inline-start: 18px;
+  }
+  ul.clean-list li, ol.clean-list li {
+    margin-bottom: 4px;
+    font-size: 8.7pt;
+  }
+
+  /* Tables (Voice Commands & Troubleshooting) */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 11px 0;
+    font-size: 8.2pt;
+    border: 0.8pt solid var(--border);
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  th {
+    background: var(--navy);
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 6px 7px;
+    border: 0.6pt solid var(--navy-mid);
+    font-size: 8.2pt;
+  }
+  td {
+    padding: 5.5px 7px;
+    border: 0.6pt solid var(--border);
+    vertical-align: top;
+    line-height: 1.42;
+  }
+  tbody tr:nth-child(even) {
+    background: var(--surface-alt);
+  }
+  .cat-row td {
+    background: var(--gold-soft) !important;
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 8.3pt;
+    border-top: 1pt solid var(--gold-border);
+    border-bottom: 1pt solid var(--gold-border);
+    padding: 5px 7px;
+  }
+
+  /* Two-Column Info Cards */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+    margin: 8px 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .mini-card {
+    background: var(--surface-alt);
+    border: 0.8pt solid var(--border);
+    border-radius: 7px;
+    padding: 8px 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .mini-card h4 {
+    margin: 0 0 4px 0;
+    font-size: 9pt;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mini-card h4 svg {
+    width: 16px;
+    height: 16px;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .mini-card p, .mini-card li {
+    font-size: 8.2pt;
+    color: var(--ink);
+  }
+  .mini-card ul {
+    margin: 4px 0 0 0;
+    padding-inline-start: 15px;
+  }
+
+  /* Page Break Helpers */
+  .page-break {
+    break-before: page;
+    page-break-before: always;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .section-divider-screen {
+    height: 12px;
+    background: #D7E0E8;
+  }
+
+  /* Footer Note per Language */
+  .doc-end-box {
+    margin-top: 14px;
+    padding: 10px 12px;
+    background: var(--navy);
+    color: #FFFFFF;
+    border-radius: 8px;
+    border-top: 3px solid var(--gold-bright);
+    text-align: center;
+    font-size: 8.4pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .doc-end-box strong {
+    color: var(--gold-bright);
+    display: block;
+    font-size: 9.5pt;
+    margin-bottom: 3px;
+  }
+
+  /* ==========================================================================
+     PRINT MEDIA RULES (A5 Booklet Default — Zero Clipped Text, Clean Margins)
+     ========================================================================== */
+  @page {
+    size: A5 portrait;
+    margin: 11mm 10.5mm 12.5mm 10.5mm;
+  }
+
+  @media print {
+    html, body {
+      background: #FFFFFF !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-size: 8.9pt;
+      line-height: 1.5;
+    }
+    .print-toolbar,
+    .section-divider-screen {
+      display: none !important;
+    }
+    .manual-book,
+    body.layout-a4 .manual-book {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      overflow: visible !important;
+    }
+    .lang-section {
+      padding: 0 !important;
+    }
+    .cover-page {
+      min-height: 184mm !important;
+      padding: 8mm !important;
+      border-radius: 6px;
+    }
+    body.layout-a4 .cover-page {
+      min-height: 266mm !important;
+      padding: 14mm !important;
+    }
+    .chapter {
+      margin-top: 11px;
+      margin-bottom: 10px;
+    }
+    .chapter-header, h2, h3 {
+      break-after: avoid !important;
+      page-break-after: avoid !important;
+    }
+    .tab-card, .box-grid, .box-item, .steps-grid, .step-card,
+    .callout, .two-col, .mini-card, .doc-end-box, .edition-banner, tr {
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+    }
+  }
+</style>
+<style id="page-size-style">@page { size: A5 portrait; margin: 11mm 10.5mm 12.5mm 10.5mm; }</style>
+</head>
+<body>
+
+<!-- Screen-Only Print Helper Toolbar -->
+<div class="print-toolbar" aria-label="Print Controls">
+  <div class="brand-tag">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.7 5.8 21 7 14 2 9.3 9 8.5 12 2"/>
+    </svg>
+    <span>Nour Alwelayah Smart Appliance — Print-Ready User Manual</span>
+  </div>
+  <div class="toolbar-actions">
+    <button type="button" id="btn-a5" class="active" onclick="setPageSize('A5')">A5 Booklet (In-Box)</button>
+    <button type="button" id="btn-a4" onclick="setPageSize('A4')">A4 Standard</button>
+    <button type="button" class="primary-print" onclick="window.print()">Print / Save as PDF (Ctrl+P)</button>
+  </div>
+</div>
+
+<main class="manual-book">
+
+  <!-- ======================================================================
+       COVER PAGE (BILINGUAL RETAIL FRONT COVER)
+       ====================================================================== -->
+  <section class="cover-page">
+    <div class="cover-frame">
+      <div>
+        <!-- Inline SVG Emblem: Geometric Octagram & Crescent -->
+        <svg class="cover-emblem" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="22" y="22" width="56" height="56" rx="6" stroke="#CC9C56" stroke-width="2.6"/>
+          <rect x="22" y="22" width="56" height="56" rx="6" transform="rotate(45 50 50)" stroke="#CC9C56" stroke-width="2.6"/>
+          <circle cx="50" cy="50" r="24" fill="#162B3E" stroke="#CC9C56" stroke-width="2"/>
+          <path d="M56 36C48.5 36.8 43 43 43 50.5C43 58 48.5 64.2 56 65C54.2 66.2 52 66.8 49.5 66.8C40.5 66.8 33.2 59.5 33.2 50.5C33.2 41.5 40.5 34.2 49.5 34.2C52 34.2 54.2 34.8 56 36Z" fill="#CC9C56"/>
+          <polygon points="60,44 61.6,47.8 65.6,48.2 62.6,50.8 63.5,54.8 60,52.7 56.5,54.8 57.4,50.8 54.4,48.2 58.4,47.8" fill="#CC9C56"/>
+        </svg>
+        <div class="cover-kicker">USER MANUAL &amp; QUICK START GUIDE</div>
+        <h1 class="cover-title-ar">جهاز نور الولاية الذكي</h1>
+        <p class="cover-subtitle-ar">دليل المستخدم وبدء التشغيل السريع</p>
+        <div class="cover-divider"></div>
+        <div class="cover-title-en">Nour Alwelayah</div>
+        <p class="cover-subtitle-en">Smart Islamic Prayer Clock &amp; Media Appliance</p>
+      </div>
+
+      <div class="cover-pillars">
+        <div class="cover-pillar">
+          <!-- Mosque / Azan SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3c-2.5 2.3-5 4.6-5 7.5V20h10v-9.5C17 7.6 14.5 5.3 12 3z"/>
+            <path d="M4 20h16"/>
+            <path d="M10 20v-4a2 2 0 0 1 4 0v4"/>
+          </svg>
+          <span>مواقيت الأذان<br>Prayer &amp; Azan</span>
+        </div>
+        <div class="cover-pillar">
+          <!-- Voice Mic SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="2" width="6" height="11" rx="3"/>
+            <path d="M5 10a7 7 0 0 0 14 0"/>
+            <line x1="12" y1="17" x2="12" y2="22"/>
+            <line x1="8" y1="22" x2="16" y2="22"/>
+          </svg>
+          <span>مساعد صوتي<br>Offline Voice</span>
+        </div>
+        <div class="cover-pillar">
+          <!-- Wi-Fi SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+            <circle cx="12" cy="19.5" r="1.2" fill="currentColor"/>
+          </svg>
+          <span>تحكم لاسلكي<br>Connect Remote</span>
+        </div>
+        <div class="cover-pillar">
+          <!-- Media / YouTube SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="5" width="19" height="14" rx="3"/>
+            <polygon points="10,9 16,12 10,15" fill="currentColor"/>
+          </svg>
+          <span>وسائط ويوتيوب<br>Audio &amp; YouTube</span>
+        </div>
+      </div>
+
+      <div class="cover-footer">
+        <span style="font-family: var(--font-ar);" dir="rtl">النسخة العربية الكاملة + النسخة الإنجليزية الكاملة</span>
+        <span style="font-family: var(--font-en);" dir="ltr">Bilingual Edition (Arabic &amp; English)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       COMPLETE ARABIC MANUAL SECTION (العربية — RTL)
+       ====================================================================== -->
+  <div class="page-break"></div>
+  <div class="section-divider-screen"></div>
+
+  <article class="lang-section lang-ar" dir="rtl" lang="ar">
+    <div class="edition-banner">
+      <div>
+        <h1>دليل المستخدم — جهاز نور الولاية الذكي</h1>
+        <p>النسخة العربية الكاملة • سـاعة مواقيت الصلاة والأذان والوسائط والمساعد الصوتي الذكي</p>
+      </div>
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#CC9C56" stroke-width="1.8">
+        <path d="M12 3c-2.5 2.3-5 4.6-5 7.5V20h10v-9.5C17 7.6 14.5 5.3 12 3z"/>
+        <path d="M4 20h16"/>
+      </svg>
+    </div>
+
+    <!-- Section 1 (AR) -->
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">١</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+        <h2>الترحيب ومحتويات الصندوق</h2>
+      </div>
+      <p>أهلاً بكم في <strong>جهاز نور الولاية الذكي</strong>، رفيقكم اليومي في المنزل والمكتب لمتابعة أوقات الصلاة والأذان بدقة، وتلاوة القرآن الكريم والأدعية والزيارات، والاستمتاع بمساعد صوتي ثنائي اللغة يعمل بالكامل دون الحاجة للإنترنت. يرجى التأكد من وجود المحتويات التالية داخل الصندوق قبل بدء التشغيل:</p>
+
+      <div class="box-grid">
+        <div class="box-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="4" width="20" height="14" rx="2.5"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="18" x2="12" y2="21"/>
+            <circle cx="12" cy="11" r="2.5"/>
+          </svg>
+          <div class="item-title">جهاز نور الولاية الذكي</div>
+          <div class="item-desc">شاشة ذكية مخصصة لعرض الساعة ومواقيت الصلاة والأذان والوسائط</div>
+        </div>
+        <div class="box-item">
+          <!-- USB Type-C Cable SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <rect x="7" y="2.5" width="10" height="5" rx="2.5"/>
+            <line x1="9.5" y1="5" x2="14.5" y2="5"/>
+            <path d="M10 7.5v3.5h4V7.5"/>
+            <path d="M12 11v5c0 2.5-2 4-4.5 4H6"/>
+            <path d="M12 16c0 2.5 2 4 4.5 4H18"/>
+          </svg>
+          <div class="item-title">كابل طاقة USB Type-C</div>
+          <div class="item-desc">كابل طاقة مرفق لتشغيل الجهاز وشحنه بأمان واستقرار</div>
+        </div>
+        <div class="box-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <line x1="9" y1="7" x2="16" y2="7"/>
+            <line x1="9" y1="11" x2="15" y2="11"/>
+          </svg>
+          <div class="item-title">دليل المستخدم</div>
+          <div class="item-desc">دليل التشغيل السريع بالعربية والإنجليزية</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>توصيل الطاقة:</strong> وصّل طرف <strong>USB Type-C</strong> في منفذ الطاقة بالجهاز، ووصّل الطرف الآخر بمحول طاقة USB قياسي <strong>5 فولت (5V)</strong> (يُنصح بقدرة 5V / 2A أو أعلى). عند بدء الشحن، سيتحول مؤشر البطارية أعلى شاشة الساعة إلى اللون الذهبي.
+      </div>
+    </section>
+
+    <!-- Section 2 (AR) -->
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">٢</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+          <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+          <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+          <circle cx="12" cy="20" r="1" fill="currentColor"/>
+        </svg>
+        <h2>الإعداد الأولي والاتصال بالواي فاي</h2>
+      </div>
+      <p>اتبع هذه الخطوات الثلاث البسيطة لتهيئة الجهاز لأول مرة خلال دقيقتين فقط:</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-badge">الخطوة ١</span>
+          <h4>تشغيل الجهاز واللغة</h4>
+          <p>بعد توصيل كابل <strong>USB Type-C</strong> وتشغيل الجهاز، ستظهر شاشة الساعة الرئيسية مباشرة. يمكنك التبديل بين <span class="ui-label">العربية</span> و <span class="ui-label">English</span> في أي وقت من <span class="ui-label">⚙ الإعدادات</span> ← قسم <strong>هذا الجهاز</strong>.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-badge">الخطوة ٢</span>
+          <h4>الاتصال بالواي فاي</h4>
+          <p>افتح تبويب <span class="ui-label">📶 الشبكة</span> واضغط على <span class="ui-label">📶 إدارة شبكات الواي فاي</span>. اختر شبكتك المنزلية، أدخل كلمة المرور، ثم اضغط اتصال. سيتم ضبط الوقت والتاريخ تلقائياً.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-badge">الخطوة ٣</span>
+          <h4>ضبط المدينة والمواقيت</h4>
+          <p>انتقل إلى <span class="ui-label">⚙ الإعدادات</span> وحدد مدينتك عبر <span class="ui-label">☰ القائمة</span> أو <span class="ui-label">⌖ GPS</span> أو <span class="ui-label">⬇ بحث</span>، ثم اختر <strong>المنطقة الزمنية</strong> و<strong>طريقة الحساب</strong> واضغط <span class="ui-label">💾 حفظ</span>.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-teal">
+        <strong>معلومة هامة:</strong> بعد حفظ موقعك، يعمل الجهاز في حساب مواقيت الصلاة والأذان والتاريخ الهجري والمساعد الصوتي <strong>بدون الحاجة للاتصال الدائم بالإنترنت</strong>، بينما يتيح اتصال الواي فاي استخدام التحكم عن بُعد، وبحث يوتيوب، واستلام التحديثات التلقائية لتحسين الأداء.
+      </div>
+    </section>
+
+    <!-- Section 3 (AR) -->
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">٣</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="14" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/>
+        </svg>
+        <h2>التعرف على واجهة الجهاز والأقسام</h2>
+      </div>
+      <p>يضم الشريط السفلي ستة تبويبات واضحة وسهلة الوصول باللمس:</p>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">⌂ الساعة</span>
+          <span class="tab-pill">الشاشة الرئيسية</span>
+        </div>
+        <ul>
+          <li>تعرض الوقت الرقمي الدقيق مع الثواني، والتاريخ الميلادي، والتاريخ الهجري (مع أسماء الأشهر العربية).</li>
+          <li>تعرض اسم المدينة والمنطقة الزمنية ومستوى البطارية وزر الميكروفون للمساعد الصوتي في الشريط العلوي.</li>
+          <li>تبرز <strong>الصلاة القادمة</strong> والوقت المتبقي لها، مع بطاقات الصلوات اليومية الست: الفجر، الشروق، الظهر، العصر، الغروب، والمغرب.</li>
+          <li>أثناء الأذان أو تشغيل الصوتيات، يظهر شريط تحكم أنيق لإيقاف الصوت أو تعديل مستواه فوراً.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">☰ الصلاة</span>
+          <span class="tab-pill">أوقات الصلاة والأذان</span>
+        </div>
+        <ul>
+          <li>تفعيل أو إيقاف <strong>الأذان</strong> بشكل مستقل لكل من الفجر والظهر والمغرب، مع أزرار تجربة فورية (<span class="ui-label">▶ الفجر</span>، <span class="ui-label">▶ الظهر</span>، <span class="ui-label">▶ المغرب</span>، <span class="ui-label">■ إيقاف</span>).</li>
+          <li>اختيار صوت الأذان لكل صلاة، وضبط <strong>صوت الأذان (0-21)</strong>، وخيار <strong>تقديم الأذان (0-500 ث)</strong>، وخيار <strong>صورة الأذان</strong>، ثم الحفظ عبر <span class="ui-label">💾 حفظ إعدادات الصلاة</span>.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">🔔 المنبهات</span>
+          <span class="tab-pill">حتى ٤٠ منبهاً ذكياً</span>
+        </div>
+        <ul>
+          <li>اضغط على أي منبه لتخصيص عنوانه، وتحديد وقته بـ<strong>وقت ثابت</strong> أو <strong>قبل / بعد الفجر أو الظهر أو المغرب</strong> (مناسب جداً للسحور أو التذكير بالأدعية).</li>
+          <li>يدعم التكرار حسب أيام الأسبوع، وخيار <strong>في شهر رمضان فقط</strong>، أو <strong>تاريخ محدد</strong>، مع صوت ومستوى صوت مستقل لكل منبه.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">♪ القارئ</span>
+          <span class="tab-pill">الصوتيات والمرئيات ويوتيوب</span>
+        </div>
+        <ul>
+          <li><span class="ui-label">♪ الصوتيات</span> و <span class="ui-label">🎬 المرئيات</span>: تصفح وشغّل التلاوات والأدعية والملفات المحفوظة على الجهاز مع التحكم الكامل بالتشغيل ومستوى الصوت.</li>
+          <li><span class="ui-label">▶ يوتيوب</span>: ابحث مباشرة في يوتيوب بالعربية أو الإنجليزية عبر شريط البحث (<span class="ui-label">ابحث في يوتيوب...</span>) وشاهد المقاطع مباشرة داخل المشغّل المدمج مع زر <span class="ui-label">⛶ ملء الشاشة</span> وزر <span class="ui-label">✕ إغلاق</span>، أو احفظ روابطك المفضلة عبر <span class="ui-label">+ رابط يوتيوب</span>.</li>
+          <li><strong>أولوية الأذان التلقائية:</strong> عند دخول وقت الأذان، يتوقف أي مقطع صوتي أو فيديو يوتيوب تلقائياً لرفع الأذان بوضوح.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">📶 الشبكة</span>
+          <span class="tab-pill">الواي فاي والتحكم عن بُعد</span>
+        </div>
+        <ul>
+          <li>يعرض حالة اتصال الواي فاي وقوة الإشارة وزر <span class="ui-label">📶 إدارة شبكات الواي فاي</span>.</li>
+          <li>يضم بطاقة <strong>التحكم عبر البلوتوث</strong> لتطبيق الجوال، وبطاقة <strong>التحكم عبر المتصفح</strong> المزوّدة برمز QR جاهز للمسح ورابط الشبكة المحلي وخيار الحماية بـ<strong>الرمز السري PIN</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">⚙ الإعدادات</span>
+          <span class="tab-pill">التخصيص واللغة والأمان</span>
+        </div>
+        <ul>
+          <li>إعدادات الموقع، والمنطقة الزمنية، وطريقة الحساب، و<strong>تعديل التاريخ الهجري</strong> (من -٢ يوم إلى +٢ يوم حسب رؤية الهلال).</li>
+          <li>خيارات <strong>نظام ٢٤ ساعة</strong>، و<strong>السطوع</strong> (مع الوضع <span class="ui-label">تلقائي</span>)، و<strong>إبقاء الشاشة قيد التشغيل</strong>، وتبديل <strong>لغة الجهاز</strong>.</li>
+          <li>إعدادات <strong>المساعد الصوتي الذكي</strong>، و<strong>خلفيات وصور الساعة</strong>، و<strong>قفل الأطفال</strong>، ومعلومات الجهاز في <span class="ui-label">حول نور الولاية</span>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 4 (AR) -->
+    <div class="page-break"></div>
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">٤</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="2" width="6" height="11" rx="3"/>
+          <path d="M5 10a7 7 0 0 0 14 0"/>
+          <line x1="12" y1="17" x2="12" y2="22"/>
+          <line x1="8" y1="22" x2="16" y2="22"/>
+        </svg>
+        <h2>المساعد الصوتي الذكي بدون إنترنت</h2>
+      </div>
+      <p>يأتي جهاز نور الولاية الذكي بمساعد صوتي متقدم ثنائي اللغة (العربية والإنجليزية) يعمل <strong>بنسبة ١٠٠٪ بدون إنترنت</strong> لاستجابة فورية وخصوصية تامة داخل المنزل.</p>
+
+      <div class="two-col">
+        <div class="mini-card">
+          <h4>طريقة التفعيل الصوتي</h4>
+          <ul>
+            <li><strong>التفعيل بدون لمس:</strong> قل كلمة التنبيه <span class="wake-pill">«ولاية»</span> (أو <span class="wake-pill">Welayah</span>) بوضوح، وعند ظهور شاشة الاستماع انطق أمرك مباشرة.</li>
+            <li><strong>التفعيل باللمس:</strong> اضغط على أيقونة الميكروفون أعلى شاشة الساعة ثم تحدث بالعربية أو الإنجليزية.</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>تخصيص المساعد الصوتي</h4>
+          <ul>
+            <li>من <span class="ui-label">⚙ الإعدادات</span> يمكنك تفعيل أو إيقاف المساعد الصوتي أو كلمة التنبيه <span class="wake-pill">«ولاية»</span> وضبط <strong>حساسية كلمة التنبيه</strong>.</li>
+            <li>اختر <strong>وضع التعرف على اللغة</strong>: <span class="ui-label">تلقائي (ثنائي اللغة)</span> أو <span class="ui-label">أولوية العربية</span> أو <span class="ui-label">أولوية الإنجليزية</span>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>جدول الأوامر الصوتية الجاهزة (أمثلة عملية)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 24%;">الفئة</th>
+            <th style="width: 44%;">قل بالعربية (مثال)</th>
+            <th style="width: 32%;">أو بالإنجليزية</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cat-row"><td colspan="3">أوقات الصلاة والأذان والقبلة</td></tr>
+          <tr>
+            <td>الصلاة القادمة</td>
+            <td>«متى الصلاة القادمة؟» • «كم باقي على الأذان؟»</td>
+            <td>When is the next prayer?</td>
+          </tr>
+          <tr>
+            <td>مواقيت اليوم</td>
+            <td>«ما هي أوقات الصلاة اليوم؟» • «جدول الصلاة اليوم»</td>
+            <td>What are today's prayer times?</td>
+          </tr>
+          <tr>
+            <td>صلاة محددة</td>
+            <td>«متى صلاة الفجر؟» • «متى صلاة الظهر؟» • «متى الإفطار اليوم؟»</td>
+            <td>When is Fajr? / When is Maghrib?</td>
+          </tr>
+          <tr>
+            <td>الشروق ومنتصف الليل</td>
+            <td>«متى شروق الشمس؟» • «متى منتصف الليل الشرعي؟»</td>
+            <td>When is sunrise? / Islamic midnight?</td>
+          </tr>
+          <tr>
+            <td>التحكم بالأذان</td>
+            <td>«شغّل الأذان» • «وقّف الأذان» • «فعّل الأذان» • «عطّل الأذان»</td>
+            <td>Play azan / Stop azan / Enable azan</td>
+          </tr>
+          <tr>
+            <td>اتجاه القبلة</td>
+            <td>«وين القبلة؟» • «ما هو اتجاه القبلة؟»</td>
+            <td>Where is the Qibla?</td>
+          </tr>
+
+          <tr class="cat-row"><td colspan="3">القرآن الكريم والأدعية والزيارات والوسائط</td></tr>
+          <tr>
+            <td>القرآن والدعاء والزيارة</td>
+            <td>«شغّل القرآن الكريم» • «شغّل دعاء اليوم» • «شغّل زيارة اليوم»</td>
+            <td>Play Quran / Play daily dua / Play Ziyarat</td>
+          </tr>
+          <tr>
+            <td>مكتبة الوسائط</td>
+            <td>«شغّل مكتبة الصوتيات» • «شغّل مكتبة الفيديو»</td>
+            <td>Play audio library / Play video library</td>
+          </tr>
+          <tr>
+            <td>التحكم بالتشغيل</td>
+            <td>«إيقاف مؤقت» • «استئناف التشغيل» • «إيقاف التشغيل» • «المقطع التالي» • «المقطع السابق» • «أعد المقطع من البداية»</td>
+            <td>Pause / Resume / Stop / Next track / Previous track</td>
+          </tr>
+          <tr>
+            <td>التكرار والمقطع الحالي</td>
+            <td>«كرّر المقطع» • «ما هو المقطع الحالي؟»</td>
+            <td>Repeat current audio / What is playing?</td>
+          </tr>
+
+          <tr class="cat-row"><td colspan="3">التحكم بالصوت والسطوع والشاشة</td></tr>
+          <tr>
+            <td>مستوى الصوت</td>
+            <td>«ارفع الصوت» • «خفّض الصوت» • «كتم الصوت» • «إلغاء كتم الصوت» • «كم مستوى الصوت؟»</td>
+            <td>Volume up / Volume down / Mute / Unmute</td>
+          </tr>
+          <tr>
+            <td>السطوع والشاشة</td>
+            <td>«زوّد السطوع» • «خفّض السطوع» • «إضاءة ليلية» • «فعّل السطوع التلقائي» • «طفّي الشاشة» • «شغّل الشاشة»</td>
+            <td>Increase brightness / Night dim mode / Auto brightness / Sleep display</td>
+          </tr>
+          <tr>
+            <td>الخلفية</td>
+            <td>«غيّر الخلفية» • «الخلفية التالية»</td>
+            <td>Change wallpaper / Next background image</td>
+          </tr>
+
+          <tr class="cat-row"><td colspan="3">المنبهات والوقت والتاريخ الهجري</td></tr>
+          <tr>
+            <td>الوقت والتاريخ</td>
+            <td>«كم الساعة الآن؟» • «كم التاريخ الهجري اليوم؟» • «ما هو تاريخ اليوم؟» • «هل توجد مناسبة دينية اليوم؟»</td>
+            <td>What time is it? / What is the Hijri date? / Islamic occasion today?</td>
+          </tr>
+          <tr>
+            <td>إدارة المنبهات</td>
+            <td>«اضبط منبه» • «ما هي المنبهات المضبوطة؟» • «وقّف المنبه» • «غفوة للمنبه»</td>
+            <td>Set an alarm / List my alarms / Stop the alarm / Snooze alarm</td>
+          </tr>
+
+          <tr class="cat-row"><td colspan="3">التنقل بين الشاشات والإعدادات</td></tr>
+          <tr>
+            <td>فتح التبويبات</td>
+            <td>«ارجع للرئيسية» • «افتح تبويب الصلاة» • «افتح تبويب المنبهات» • «افتح المشغل» • «افتح الإعدادات» • «افتح إعدادات الواي فاي»</td>
+            <td>Go home / Open Prayer tab / Open Player tab / Open Settings</td>
+          </tr>
+          <tr>
+            <td>اللغة والنظام</td>
+            <td>«حوّل اللغة للعربية» • «حوّل اللغة للإنجليزية» • «حوّل الساعة إلى نظام 12 ساعة» • «نظام 24 ساعة»</td>
+            <td>Switch language to Arabic / English / 12-hour or 24-hour clock</td>
+          </tr>
+          <tr>
+            <td>الموقع والشبكة</td>
+            <td>«ما هي المدينة المضبوطة؟» • «تحديد الموقع تلقائياً» • «تحقق من حالة الواي فاي»</td>
+            <td>What city is set? / Auto detect location / Check Wi-Fi status</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 5 (AR) -->
+    <div class="page-break"></div>
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">٥</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="2" width="14" height="20" rx="2"/>
+          <line x1="12" y1="18" x2="12.01" y2="18"/>
+        </svg>
+        <h2>التحكم عن بُعد عبر نور الولاية كونكت</h2>
+      </div>
+      <p>يمكنك التحكم الكامل في الجهاز من هاتفك الذكي أو حاسوبك لاسلكياً عبر <strong>تطبيق نور الولاية كونكت (Nour Alwelayah Connect)</strong> أو مباشرة عبر <strong>التحكم عبر المتصفح (Wi-Fi Web Remote)</strong> دون الحاجة لتثبيت أي برامج إضافية.</p>
+
+      <div class="two-col">
+        <div class="mini-card">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg>
+            أولاً: عبر المتصفح (QR Code)
+          </h4>
+          <ol class="clean-list">
+            <li>تأكد أن هاتفك وجهاز نور الولاية متصلان <strong>بنفس شبكة الواي فاي</strong>.</li>
+            <li>افتح تبويب <span class="ui-label">📶 الشبكة</span> على الجهاز وتأكد أن مفتاح <strong>التحكم عبر المتصفح</strong> مفعّل.</li>
+            <li>امسح رمز <strong>QR (امسح الرمز)</strong> بكاميرا هاتفك، أو اكتب الرابط الظاهر على الشاشة في متصفح الهاتف أو الكمبيوتر.</li>
+            <li>إذا قمت بتعيين <strong>رمز سري PIN</strong> (4–8 أرقام)، أدخله للدخول الآمن.</li>
+          </ol>
+        </div>
+        <div class="mini-card">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
+            ثانياً: عبر تطبيق نور الولاية كونكت
+          </h4>
+          <ol class="clean-list">
+            <li>افتح تطبيق <strong>نور الولاية كونكت</strong> على هاتفك الذكي مع تفعيل الواي فاي أو البلوتوث.</li>
+            <li>سيكتشف التطبيق الجهاز تلقائياً على الشبكة المحلية أو عبر البلوتوث (تجد اسم البلوتوث في <span class="ui-label">⚙ الإعدادات</span> ← <strong>هذا الجهاز</strong>).</li>
+            <li>في تبويب <span class="ui-label">📶 الشبكة</span> يمكنك متابعة أجهزة التحكم المتصلة ضمن بطاقة <strong>التحكم عبر البلوتوث</strong>.</li>
+          </ol>
+        </div>
+      </div>
+
+      <h3>ماذا يمكنك فعله عبر التحكم عن بُعد؟</h3>
+      <ul class="clean-list">
+        <li><strong>التحكم بالتشغيل والوسائط:</strong> تشغيل/إيقاف المقاطع الصوتية والفيديو ويوتيوب، وتغيير مستوى الصوت، وإيقاف الأذان أو المنبهات.</li>
+        <li><strong>رفع أصوات الأذان المخصصة والملفات لاسلكياً:</strong> من مدير الملفات في صفحة التحكم أو التطبيق، اختر مجلد الأذان (<strong>/azan</strong>) لرفع ملفات الأذان المفضلة لديك (MP3 وغيرها)، أو ارفع التلاوات إلى <strong>/audios</strong>، والمرئيات إلى <strong>/videos</strong>، ونغمات المنبه إلى <strong>/alarms</strong>، والخلفيات إلى <strong>/wallpaper</strong>.</li>
+        <li><strong>تعديل الإعدادات والمنبهات:</strong> تحديث المدينة ومفاتيح الأذان والمنبهات الـ ٤٠ من مقعدك بكل سهولة.</li>
+      </ul>
+    </section>
+
+    <!-- Section 6 (AR) -->
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">٦</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+        </svg>
+        <h2>أوقات الصلاة والأذان وتخصيص الشاشة</h2>
+      </div>
+
+      <ul class="clean-list">
+        <li><strong>تخصيص أصوات الأذان:</strong> من تبويب <span class="ui-label">☰ الصلاة</span>، اختر صوت الأذان المدمج أو أي ملف قمت برفعه عبر نور الولاية كونكت لكل من <strong>الفجر</strong> و<strong>الظهر</strong> و<strong>المغرب</strong>، واضبط <strong>صوت الأذان (0-21)</strong>، ثم اضغط <span class="ui-label">💾 حفظ إعدادات الصلاة</span>.</li>
+        <li><strong>صور الأذان وخلفيات الساعة:</strong> من <span class="ui-label">⚙ الإعدادات</span> ← <strong>خلفيات وصور الساعة</strong>، يمكنك تفعيل أو إيقاف <strong>صورة الأذان (أثناء الأذان)</strong> لعرض صور إسلامية هادئة وقت الأذان. كما يمكنك الضغط على <span class="ui-label">تغيير الخلفية</span> لاختيار خلفية مخصصة أو العودة إلى <strong>الخلفية الكحلية الافتراضية</strong> (يُضاف تعتيم لطيف تلقائياً للحفاظ على وضوح الأرقام).</li>
+        <li><strong>السطوع والعرض الليلي:</strong> اضبط شريط <strong>السطوع</strong> يدوياً حسب إضاءة الغرفة أو اضغط <span class="ui-label">تلقائي</span>. يمكنك أيضاً قول «إضاءة ليلية» للمساعد الصوتي لتقليل السطوع ليلاً براحة تامة.</li>
+        <li><strong>تعديل التاريخ الهجري:</strong> لمطابقة رؤية الهلال المحلية في بلدك، استخدم قائمة <strong>تعديل التاريخ الهجري</strong> (-٢ إلى +٢ يوم) في <span class="ui-label">⚙ الإعدادات</span> ثم اضغط <span class="ui-label">💾 حفظ</span>.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>قفل الأطفال (حماية شاشة اللمس):</strong> لمنع الأطفال من تغيير الإعدادات بالخطأ، افتح <span class="ui-label">⚙ الإعدادات</span> ← <strong>قفل الأطفال</strong> وفعّل خيار <strong>قفل شاشة اللمس</strong> أو اضغط <span class="ui-label">قفل الشاشة الآن</span>. تبقى الساعة والأذان والمساعد الصوتي («ولاية») فعّالة بالكامل. <strong>لفتح القفل:</strong> اضغط مطوّلاً على <strong>رمز القفل</strong> الظاهر في شاشة الساعة لمدة <strong>٣ ثوانٍ</strong> متواصلة حتى تكتمل الحلقة الذهبية.
+      </div>
+    </section>
+
+    <!-- Section 7 (AR) -->
+    <div class="page-break"></div>
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">٧</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <h2>العناية بالجهاز والسلامة وحل المشكلات الشائعة</h2>
+      </div>
+
+      <div class="callout callout-safety">
+        <strong>إرشادات السلامة والعناية:</strong>
+        <ul class="clean-list" style="margin-bottom: 0;">
+          <li>استخدم كابل <strong>USB Type-C</strong> المرفق مع محول طاقة USB معتمد بقوة <strong>5V</strong>، وتجنب تعريض الجهاز للماء أو الرطوبة العالية أو أشعة الشمس المباشرة.</li>
+          <li>لتنظيف الشاشة، افصل الكابل أولاً وامسحها بلطف بقطعة قماش ناعمة من المايكروفايبر (جافة أو مبللة قليلاً جداً دون رش سوائل مباشرة على الشاشة).</li>
+          <li><strong>التحديثات التلقائية عبر الواي فاي:</strong> عند اتصال الجهاز بالواي فاي، يستقبل تحسينات النظام وتحديثات قاعدة المعرفة للمساعد الصوتي تلقائياً عبر الهواء لضمان أفضل دقة وأداء دون أي تدخل منك.</li>
+        </ul>
+      </div>
+
+      <h3>حلول سريعة للمشكلات الشائعة</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 34%;">المشكلة</th>
+            <th style="width: 66%;">الحل السريع</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>لا يتصل الجهاز بالواي فاي</strong></td>
+            <td>افتح <span class="ui-label">📶 الشبكة</span> ← <span class="ui-label">📶 إدارة شبكات الواي فاي</span> واضغط <span class="ui-label">بحث / تحديث</span>. تأكد من صحة كلمة المرور وأن الجهاز ضمن نطاق إشارة الراوتر.</td>
+          </tr>
+          <tr>
+            <td><strong>الأذان لا يصدر صوتاً أو منخفض</strong></td>
+            <td>افتح <span class="ui-label">☰ الصلاة</span> وتأكد أن مفتاح <strong>الأذان</strong> مفعّل للصلاة المطلوبة، وأن <strong>صوت الأذان (0-21)</strong> أكبر من صفر، ثم اضغط <span class="ui-label">▶ الفجر</span> أو <span class="ui-label">▶ الظهر</span> للتجربة واحفظ التغييرات.</td>
+          </tr>
+          <tr>
+            <td><strong>فرق بسيط في أوقات الصلاة أو الهجري</strong></td>
+            <td>تحقق من المدينة والمنطقة الزمنية و<strong>طريقة الحساب</strong> في <span class="ui-label">⚙ الإعدادات</span>، واضبط <strong>تعديل التاريخ الهجري</strong> حسب رؤية الهلال ثم اضغط <span class="ui-label">💾 حفظ</span>.</td>
+          </tr>
+          <tr>
+            <td><strong>المساعد الصوتي لا يستجيب بوضوح</strong></td>
+            <td>تأكد أن المساعد الصوتي وكلمة التنبيه <span class="wake-pill">«ولاية»</span> مفعّلان في <span class="ui-label">⚙ الإعدادات</span>. تحدث بصوت واضح على بُعد ١–٣ أمتار في غرفة هادئة، أو اختر <span class="ui-label">أولوية العربية</span> وعدّل شريط <strong>حساسية كلمة التنبيه</strong>.</td>
+          </tr>
+          <tr>
+            <td><strong>الشاشة لا تستجيب للمس</strong></td>
+            <td>تحقق من ظهور رمز القفل (وضع <strong>قفل الأطفال</strong>). اضغط مطوّلاً على رمز القفل لمدة <strong>٣ ثوانٍ</strong> لفتح الشاشة فوراً.</td>
+          </tr>
+          <tr>
+            <td><strong>تعذّر فتح صفحة التحكم عن بُعد</strong></td>
+            <td>تأكد من تفعيل <strong>التحكم عبر المتصفح</strong> في <span class="ui-label">📶 الشبكة</span>، وأن الهاتف والجهاز على <strong>نفس شبكة الواي فاي</strong> (وليس بيانات الجوال).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="doc-end-box">
+        <strong>هل تحتاج إلى مساعدة إضافية؟</strong>
+        لمعرفة رقم جهازك وإصدار البرنامج ومعلومات التواصل والدعم الفني، افتح <span style="color:#CC9C56; font-weight:700;">⚙ الإعدادات ← حول نور الولاية</span>.
+      </div>
+    </section>
+  </article>
+
+  <!-- ======================================================================
+       COMPLETE ENGLISH MANUAL SECTION (English — LTR)
+       ====================================================================== -->
+  <div class="page-break"></div>
+  <div class="section-divider-screen"></div>
+
+  <article class="lang-section lang-en" dir="ltr" lang="en">
+    <div class="edition-banner">
+      <div>
+        <h1>User Manual — Nour Alwelayah Smart Appliance</h1>
+        <p>Complete English Edition • Smart Prayer Clock, Azan, Media &amp; Offline Voice Assistant</p>
+      </div>
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#CC9C56" stroke-width="1.8">
+        <path d="M12 3c-2.5 2.3-5 4.6-5 7.5V20h10v-9.5C17 7.6 14.5 5.3 12 3z"/>
+        <path d="M4 20h16"/>
+      </svg>
+    </div>
+
+    <!-- Section 1 (EN) -->
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">1</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+        <h2>Welcome &amp; What's in the Box</h2>
+      </div>
+      <p>Welcome to your <strong>Nour Alwelayah Smart Appliance</strong>—designed to bring accurate daily prayer times, serene Azan recitations, Quran, Duas, Ziyarat, embedded YouTube viewing, and a fast 100% offline bilingual voice assistant into your home. Please verify that your box contains the following items:</p>
+
+      <div class="box-grid">
+        <div class="box-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="4" width="20" height="14" rx="2.5"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="18" x2="12" y2="21"/>
+            <circle cx="12" cy="11" r="2.5"/>
+          </svg>
+          <div class="item-title">Nour Alwelayah Smart Appliance</div>
+          <div class="item-desc">Dedicated smart prayer clock, Azan &amp; media display</div>
+        </div>
+        <div class="box-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <rect x="7" y="2.5" width="10" height="5" rx="2.5"/>
+            <line x1="9.5" y1="5" x2="14.5" y2="5"/>
+            <path d="M10 7.5v3.5h4V7.5"/>
+            <path d="M12 11v5c0 2.5-2 4-4.5 4H6"/>
+            <path d="M12 16c0 2.5 2 4 4.5 4H18"/>
+          </svg>
+          <div class="item-title">USB Type-C Power Cable</div>
+          <div class="item-desc">Included power &amp; charging cable for reliable operation</div>
+        </div>
+        <div class="box-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <line x1="9" y1="7" x2="16" y2="7"/>
+            <line x1="9" y1="11" x2="15" y2="11"/>
+          </svg>
+          <div class="item-title">User Manual &amp; Quick Start</div>
+          <div class="item-desc">Bilingual Arabic &amp; English printed guide</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Power Connection:</strong> Plug the included <strong>USB Type-C</strong> cable into the appliance's power port and connect the other end to a standard <strong>5V USB power adapter</strong> (5V / 2A or higher recommended). While charging, the battery icon at the top of the Clock screen illuminates in gold.
+      </div>
+    </section>
+
+    <!-- Section 2 (EN) -->
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">2</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+          <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+          <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+          <circle cx="12" cy="20" r="1" fill="currentColor"/>
+        </svg>
+        <h2>First-Time Setup &amp; Wi-Fi Connection</h2>
+      </div>
+      <p>Follow these three quick steps to get your appliance ready in under two minutes:</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-badge">STEP 1</span>
+          <h4>Power On &amp; Language</h4>
+          <p>Connect the <strong>USB Type-C</strong> cable and power on. The main Clock screen opens automatically. Switch anytime between <span class="ui-label">English</span> and <span class="ui-label">العربية</span> in <span class="ui-label">⚙ Settings</span> → <strong>This device</strong>.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-badge">STEP 2</span>
+          <h4>Connect to Home Wi-Fi</h4>
+          <p>Tap the <span class="ui-label">📶 WiFi</span> tab and select <span class="ui-label">📶 Wi-Fi Network Manager</span>. Choose your Wi-Fi network, enter the password, and tap Connect. Clock time syncs automatically.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-badge">STEP 3</span>
+          <h4>Set City &amp; Prayer Method</h4>
+          <p>Open <span class="ui-label">⚙ Settings</span> and set your city using <span class="ui-label">☰ List</span>, <span class="ui-label">⌖ GPS</span>, or <span class="ui-label">⬇ Online</span>. Confirm your <strong>Time zone</strong> and <strong>Calculation method</strong>, then tap <span class="ui-label">💾 Save</span>.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-teal">
+        <strong>Works Offline Too:</strong> Once your city is saved, prayer schedules, Azan playback, Hijri calendar, alarms, and the voice assistant all work <strong>100% offline</strong>. Staying connected to Wi-Fi unlocks smartphone remote control, YouTube search, and automatic over-the-air improvements.
+      </div>
+    </section>
+
+    <!-- Section 3 (EN) -->
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">3</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="14" y="14" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/>
+        </svg>
+        <h2>Exploring the Appliance Interface</h2>
+      </div>
+      <p>Navigate effortlessly using the six clearly labeled tabs along the bottom bar:</p>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">⌂ Clock</span>
+          <span class="tab-pill">Home Screen</span>
+        </div>
+        <ul>
+          <li>Displays the large digital clock with seconds, Gregorian date, and localized Hijri date.</li>
+          <li>Top bar shows your City name, Time zone badge, live Battery level, and the <strong>Voice Assistant</strong> microphone button.</li>
+          <li>Highlights the <strong>Next prayer</strong> countdown along with all six daily cards: Fajr, Sunrise, Dhuhr, Asr, Sunset, and Maghrib.</li>
+          <li>Displays a convenient mini control bar whenever an Azan, alarm, or audio track is playing.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">☰ Prayer</span>
+          <span class="tab-pill">Prayer Times &amp; Azan</span>
+        </div>
+        <ul>
+          <li>Toggle <strong>Azan</strong> ON or OFF individually for Fajr, Dhuhr, and Maghrib, or preview anytime using <span class="ui-label">▶ Fajr</span>, <span class="ui-label">▶ Dhuhr</span>, <span class="ui-label">▶ Maghrib</span>, and <span class="ui-label">■ Stop</span>.</li>
+          <li>Choose custom Azan sounds per prayer, adjust <strong>Azan volume (0-21)</strong>, set <strong>Start azan early (0-500 s)</strong>, toggle <strong>Azan picture</strong>, and confirm with <span class="ui-label">💾 Save prayer settings</span>.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">🔔 Alarms</span>
+          <span class="tab-pill">Up to 40 Smart Alarms</span>
+        </div>
+        <ul>
+          <li>Tap any alarm row to set a custom <strong>Title</strong> and choose either a <strong>Fixed time</strong> or a prayer-relative time (<strong>Before / after Fajr, Dhuhr, or Maghrib</strong>—ideal for Suhoor or daily reminders).</li>
+          <li>Supports weekday repeat schedules, <strong>Ramadan only</strong> mode, or a <strong>Specific date</strong>, with an independent tone and volume (0–21) per alarm.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">♪ Player</span>
+          <span class="tab-pill">Audios, Videos &amp; YouTube</span>
+        </div>
+        <ul>
+          <li><span class="ui-label">♪ Audios</span> &amp; <span class="ui-label">🎬 Videos</span>: Browse and play your local Quran recitations, Duas, Ziyarat, and video files with full transport and volume controls.</li>
+          <li><span class="ui-label">▶ YouTube</span>: Search directly inside the appliance using the bilingual search bar (<span class="ui-label">Search YouTube...</span>). Tap any result to watch right inside the embedded player with <span class="ui-label">⛶ Fullscreen</span> and <span class="ui-label">✕ Close</span> controls, or save favorites via <span class="ui-label">+ YouTube link</span>.</li>
+          <li><strong>Automatic Azan Priority:</strong> Active music or YouTube playback automatically pauses the moment an Azan starts.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">📶 WiFi</span>
+          <span class="tab-pill">Network &amp; Remote Control</span>
+        </div>
+        <ul>
+          <li>View your active Wi-Fi network (SSID), signal meter, and launch <span class="ui-label">📶 Wi-Fi Network Manager</span>.</li>
+          <li>Manage <strong>Bluetooth Remote</strong> connections and the <strong>Wi-Fi Web Remote</strong> with an instant scannable <strong>QR Code</strong>, local address, and optional 4–8 digit <strong>PIN</strong> protection.</li>
+        </ul>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-card-head">
+          <span class="tab-card-title">⚙ Settings</span>
+          <span class="tab-pill">Personalization &amp; Safety</span>
+        </div>
+        <ul>
+          <li>Configure City, Time zone, Calculation method, and <strong>Hijri date adjust</strong> (-2 to +2 days for local moon sighting).</li>
+          <li>Adjust <strong>24-hour clock</strong>, <strong>Brightness</strong> (or <span class="ui-label">Auto</span>), <strong>Keep screen on</strong>, and <strong>Appliance language</strong>.</li>
+          <li>Manage <strong>Offline Voice Assistant</strong>, <strong>Clock pictures</strong>, <strong>Child Lock</strong>, and view device details under <span class="ui-label">About Nour Alwelayah</span>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 4 (EN) -->
+    <div class="page-break"></div>
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">4</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="2" width="6" height="11" rx="3"/>
+          <path d="M5 10a7 7 0 0 0 14 0"/>
+          <line x1="12" y1="17" x2="12" y2="22"/>
+          <line x1="8" y1="22" x2="16" y2="22"/>
+        </svg>
+        <h2>Offline Bilingual Voice Assistant</h2>
+      </div>
+      <p>Your appliance includes a built-in Arabic and English voice assistant that runs <strong>100% offline</strong> directly on the device for instant response times and complete household privacy.</p>
+
+      <div class="two-col">
+        <div class="mini-card">
+          <h4>How to Activate</h4>
+          <ul>
+            <li><strong>Hands-Free Wake Word:</strong> Simply say <span class="wake-pill">“Welayah”</span> (or <span class="wake-pill">«ولاية»</span>). When the listening overlay appears, speak your command naturally.</li>
+            <li><strong>Tap-to-Speak:</strong> Tap the microphone button in the top bar of the Clock screen and speak in English or Arabic.</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>Voice Preferences</h4>
+          <ul>
+            <li>Open <span class="ui-label">⚙ Settings</span> to toggle the Voice Assistant or <strong>Hands-Free Wake Word ("Welayah")</strong> and fine-tune <strong>Wake Word Sensitivity</strong>.</li>
+            <li>Select <strong>Recognition Mode</strong>: <span class="ui-label">Auto (Bilingual)</span>, <span class="ui-label">Arabic Priority</span>, or <span class="ui-label">English Priority</span>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Curated Voice Command Reference</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 23%;">Category</th>
+            <th style="width: 41%;">Say in English (Examples)</th>
+            <th style="width: 36%; text-align: right;">أو بالعربية (Arabic)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cat-row"><td colspan="3">Prayer Times, Azan &amp; Qibla</td></tr>
+          <tr>
+            <td>Next Prayer</td>
+            <td>“When is the next prayer?” • “What time is the next azan?”</td>
+            <td dir="rtl">«متى الصلاة القادمة؟» • «كم باقي على الأذان؟»</td>
+          </tr>
+          <tr>
+            <td>Today's Schedule</td>
+            <td>“What are today's prayer times?” • “Read all prayer times”</td>
+            <td dir="rtl">«ما هي أوقات الصلاة اليوم؟»</td>
+          </tr>
+          <tr>
+            <td>Specific Prayer</td>
+            <td>“When is Fajr?” • “When is Dhuhr?” • “When is Iftar today?”</td>
+            <td dir="rtl">«متى صلاة الفجر؟» • «متى صلاة المغرب؟»</td>
+          </tr>
+          <tr>
+            <td>Sunrise &amp; Midnight</td>
+            <td>“When is sunrise?” • “When is Islamic midnight?”</td>
+            <td dir="rtl">«متى شروق الشمس؟» • «متى منتصف الليل الشرعي؟»</td>
+          </tr>
+          <tr>
+            <td>Azan Control</td>
+            <td>“Play azan” • “Stop azan” • “Enable azan” • “Disable azan”</td>
+            <td dir="rtl">«شغّل الأذان» • «وقّف الأذان» • «فعّل الأذان»</td>
+          </tr>
+          <tr>
+            <td>Qibla Direction</td>
+            <td>“Where is the Qibla?” • “Show Qibla direction”</td>
+            <td dir="rtl">«وين القبلة؟» • «ما هو اتجاه القبلة؟»</td>
+          </tr>
+
+          <tr class="cat-row"><td colspan="3">Quran, Duas, Ziyarat &amp; Media Playback</td></tr>
+          <tr>
+            <td>Spiritual Audio</td>
+            <td>“Play Quran” • “Play daily dua” • “Play Ziyarat”</td>
+            <td dir="rtl">«شغّل القرآن الكريم» • «شغّل دعاء اليوم» • «شغّل زيارة اليوم»</td>
+          </tr>
+          <tr>
+            <td>Local Libraries</td>
+            <td>“Play audio library” • “Play video library”</td>
+            <td dir="rtl">«شغّل مكتبة الصوتيات» • «شغّل مكتبة الفيديو»</td>
+          </tr>
+          <tr>
+            <td>Transport Controls</td>
+            <td>“Pause playback” • “Resume playback” • “Stop playback” • “Next track” • “Previous track” • “Restart track”</td>
+            <td dir="rtl">«إيقاف مؤقت» • «استئناف التشغيل» • «إيقاف التشغيل» • «المقطع التالي»</td>
+          </tr>
+          <tr>
+            <td>Repeat &amp; Info</td>
+            <td>“Repeat current audio” • “What is playing right now?”</td>
+            <td dir="rtl">«كرّر المقطع» • «ما هو المقطع الحالي؟»</td>
+          </tr>
+
+          <tr class="cat-row"><td colspan="3">Volume &amp; Display Control</td></tr>
+          <tr>
+            <td>Volume</td>
+            <td>“Volume up” • “Volume down” • “Mute sound” • “Unmute sound” • “What is the volume level?”</td>
+            <td dir="rtl">«ارفع الصوت» • «خفّض الصوت» • «كتم الصوت» • «إلغاء كتم الصوت»</td>
+          </tr>
+          <tr>
+            <td>Brightness &amp; Screen</td>
+            <td>“Increase brightness” • “Decrease brightness” • “Night dim mode” • “Enable auto brightness” • “Turn off the screen”</td>
+            <td dir="rtl">«زوّد السطوع» • «خفّض السطوع» • «إضاءة ليلية» • «طفّي الشاشة»</td>
+          </tr>
+          <tr>
+            <td>Wallpaper</td>
+            <td>“Change wallpaper” • “Next background image”</td>
+            <td dir="rtl">«غيّر الخلفية» • «الخلفية التالية»</td>
+          </tr>
+
+          <tr class="cat-row"><td colspan="3">Alarms, Date &amp; Time</td></tr>
+          <tr>
+            <td>Time &amp; Calendar</td>
+            <td>“What time is it?” • “What is the Hijri date?” • “What is today's date?” • “Is there an Islamic occasion today?”</td>
+            <td dir="rtl">«كم الساعة الآن؟» • «كم التاريخ الهجري اليوم؟» • «هل توجد مناسبة دينية اليوم؟»</td>
+          </tr>
+          <tr>
+            <td>Alarms</td>
+            <td>“Set an alarm” • “What alarms are set?” • “Stop the alarm” • “Snooze alarm”</td>
+            <td dir="rtl">«اضبط منبه» • «اعرض المنبهات» • «وقّف المنبه» • «غفوة للمنبه»</td>
+          </tr>
+
+          <tr class="cat-row"><td colspan="3">Navigation &amp; Settings</td></tr>
+          <tr>
+            <td>Open Screens</td>
+            <td>“Go home” • “Open Prayer tab” • “Open Alarms tab” • “Open Player tab” • “Open Settings tab” • “Open Wi-Fi settings”</td>
+            <td dir="rtl">«ارجع للرئيسية» • «افتح تبويب الصلاة» • «افتح المشغل» • «افتح الإعدادات»</td>
+          </tr>
+          <tr>
+            <td>Language &amp; Clock</td>
+            <td>“Switch language to Arabic” • “Switch language to English” • “Switch to 12 hour clock” • “Switch to 24 hour clock”</td>
+            <td dir="rtl">«حوّل اللغة للعربية» • «حوّل اللغة للإنجليزية» • «نظام 12 ساعة»</td>
+          </tr>
+          <tr>
+            <td>Location &amp; Wi-Fi</td>
+            <td>“What city is set?” • “Auto detect location” • “Check Wi-Fi status”</td>
+            <td dir="rtl">«ما هي المدينة المضبوطة؟» • «تحديد الموقع تلقائياً» • «تحقق من حالة الواي فاي»</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 5 (EN) -->
+    <div class="page-break"></div>
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">5</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="2" width="14" height="20" rx="2"/>
+          <line x1="12" y1="18" x2="12.01" y2="18"/>
+        </svg>
+        <h2>Nour Alwelayah Connect — Companion App &amp; Web Remote</h2>
+      </div>
+      <p>Control your appliance effortlessly from across the room using either the <strong>Nour Alwelayah Connect</strong> companion smartphone app or any phone/computer web browser via the built-in <strong>Wi-Fi Web Remote</strong>.</p>
+
+      <div class="two-col">
+        <div class="mini-card">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg>
+            Option A: Wi-Fi Web Remote (QR)
+          </h4>
+          <ol class="clean-list">
+            <li>Connect your smartphone and the appliance to the <strong>same Wi-Fi network</strong>.</li>
+            <li>Open the <span class="ui-label">📶 WiFi</span> tab and make sure the <strong>Wi-Fi Web Remote</strong> switch is ON.</li>
+            <li>Scan the on-screen <strong>QR Code (SCAN ME)</strong> with your phone camera, or type the shown local URL into any browser.</li>
+            <li>If you configured a 4–8 digit <strong>PIN</strong>, enter it to unlock the remote page.</li>
+          </ol>
+        </div>
+        <div class="mini-card">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5l11 11L12 23V1l5.5 5.5-11 11"/></svg>
+            Option B: Companion App
+          </h4>
+          <ol class="clean-list">
+            <li>Open the <strong>Nour Alwelayah Connect</strong> app on your smartphone with Wi-Fi or Bluetooth enabled.</li>
+            <li>The app automatically discovers your appliance on your local Wi-Fi or via Bluetooth (view the Bluetooth name under <span class="ui-label">⚙ Settings</span> → <strong>This device</strong>).</li>
+            <li>Check active paired remotes anytime in the <strong>Bluetooth Remote</strong> card on the <span class="ui-label">📶 WiFi</span> tab.</li>
+          </ol>
+        </div>
+      </div>
+
+      <h3>Key Remote Capabilities</h3>
+      <ul class="clean-list">
+        <li><strong>Media &amp; Playback Control:</strong> Play, pause, skip, or stop Quran recitations, local media, and YouTube playback, and adjust volume remotely.</li>
+        <li><strong>Wireless Custom Azan &amp; Media Uploads:</strong> Use the built-in File Manager in the Web Remote or companion app to wirelessly upload your favorite Azan audio files directly into the <strong>/azan</strong> folder (as well as Quran/Duas to <strong>/audios</strong>, videos to <strong>/videos</strong>, alarm tones to <strong>/alarms</strong>, and wallpapers to <strong>/wallpaper</strong>).</li>
+        <li><strong>Settings &amp; Alarms Management:</strong> Adjust prayer switches, city settings, and all 40 alarms directly from your phone.</li>
+      </ul>
+    </section>
+
+    <!-- Section 6 (EN) -->
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">6</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+        </svg>
+        <h2>Prayer Times, Azan Sounds &amp; Display Personalization</h2>
+      </div>
+
+      <ul class="clean-list">
+        <li><strong>Choosing Azan Recitations:</strong> Open <span class="ui-label">☰ Prayer</span> and choose any built-in or wirelessly uploaded Azan file for <strong>Fajr</strong>, <strong>Dhuhr</strong>, and <strong>Maghrib</strong>. Set your preferred <strong>Azan volume (0-21)</strong> and tap <span class="ui-label">💾 Save prayer settings</span>.</li>
+        <li><strong>Azan Pictures &amp; Clock Wallpapers:</strong> In <span class="ui-label">⚙ Settings</span> → <strong>Clock pictures (tablet)</strong>, switch <strong>Azan picture (during the azan)</strong> ON or OFF to display tranquil imagery during prayer calls. Tap <span class="ui-label">Change Background</span> to select a custom clock wallpaper or return to the <strong>Default (Solid Navy)</strong> theme (backgrounds are gently dimmed automatically so clock digits remain easy to read).</li>
+        <li><strong>Brightness &amp; Night Viewing:</strong> Use the <strong>Brightness</strong> slider in <span class="ui-label">⚙ Settings</span> or tap <span class="ui-label">Auto</span>. At night, you can also say “Night dim mode” to the Voice Assistant for comfortable low-glare viewing.</li>
+        <li><strong>Hijri Moon-Sighting Adjustment:</strong> Fine-tune the displayed Hijri calendar by <strong>-2 to +2 days</strong> in <span class="ui-label">⚙ Settings</span> and press <span class="ui-label">💾 Save</span>.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Child Lock (Touchscreen Protection):</strong> Prevent accidental taps by opening <span class="ui-label">⚙ Settings</span> → <strong>Child Lock</strong> and toggling <strong>Lock touchscreen against accidental taps</strong> (or tapping <span class="ui-label">Lock Screen Now</span>). The clock, prayer times, Azan alerts, and hands-free <strong>“Welayah”</strong> voice commands remain fully active. <strong>To Unlock:</strong> Press and hold the <strong>lock icon</strong> on the Clock screen continuously for <strong>3 seconds</strong> until the gold ring fills.
+      </div>
+    </section>
+
+    <!-- Section 7 (EN) -->
+    <div class="page-break"></div>
+    <section class="chapter">
+      <div class="chapter-header">
+        <span class="chapter-num">7</span>
+        <svg class="chapter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <h2>Care, Safety &amp; Troubleshooting</h2>
+      </div>
+
+      <div class="callout callout-safety">
+        <strong>Safety, Care &amp; Automatic Improvements:</strong>
+        <ul class="clean-list" style="margin-bottom: 0;">
+          <li>Always power the appliance using the included <strong>USB Type-C</strong> cable and a certified <strong>5V USB power adapter</strong>. Keep away from water, high humidity, and direct heat sources.</li>
+          <li>Unplug the power cable before cleaning. Gently wipe the display with a soft, dry (or very slightly damp) microfiber cloth—never spray liquid cleaners directly onto the screen.</li>
+          <li><strong>Automatic Over-the-Air Wi-Fi Improvements:</strong> When connected to Wi-Fi, your appliance automatically checks for and applies system and offline voice knowledge improvements in the background so your experience stays smooth and up to date.</li>
+        </ul>
+      </div>
+
+      <h3>Quick Troubleshooting Guide</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 34%;">Issue</th>
+            <th style="width: 66%;">Quick Solution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cannot connect to Wi-Fi</strong></td>
+            <td>Open <span class="ui-label">📶 WiFi</span> → <span class="ui-label">📶 Wi-Fi Network Manager</span> and tap <span class="ui-label">Scan / Refresh</span>. Verify your Wi-Fi password and ensure the appliance is within good router range.</td>
+          </tr>
+          <tr>
+            <td><strong>No Azan sound or volume too low</strong></td>
+            <td>Open <span class="ui-label">☰ Prayer</span>, verify the <strong>Azan</strong> toggle is ON for each desired prayer, ensure <strong>Azan volume (0-21)</strong> is above 0, tap <span class="ui-label">▶ Fajr</span> or <span class="ui-label">▶ Dhuhr</span> to test, and tap <span class="ui-label">💾 Save prayer settings</span>.</td>
+          </tr>
+          <tr>
+            <td><strong>Prayer times or Hijri date off slightly</strong></td>
+            <td>Verify your City, <strong>Time zone</strong>, <strong>Calculation method</strong>, and <strong>Hijri date adjust</strong> in <span class="ui-label">⚙ Settings</span>, then tap <span class="ui-label">💾 Save</span>.</td>
+          </tr>
+          <tr>
+            <td><strong>Voice Assistant misses commands</strong></td>
+            <td>Check that both the Voice Assistant and <strong>Hands-Free Wake Word ("Welayah")</strong> are enabled in <span class="ui-label">⚙ Settings</span>. Speak clearly 1–3 meters away in a quiet room, select your preferred <strong>Recognition Mode</strong>, or adjust <strong>Wake Word Sensitivity</strong>.</td>
+          </tr>
+          <tr>
+            <td><strong>Touchscreen does not respond</strong></td>
+            <td>Check if the lock badge is visible (<strong>Child Lock</strong> is active). Press and hold the lock icon continuously for <strong>3 seconds</strong> to unlock immediately.</td>
+          </tr>
+          <tr>
+            <td><strong>Phone cannot open Web Remote</strong></td>
+            <td>Confirm <strong>Wi-Fi Web Remote</strong> is enabled in <span class="ui-label">📶 WiFi</span> and that your phone is connected to the <strong>same Wi-Fi network</strong> (turn off mobile data/VPN if needed).</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="doc-end-box">
+        <strong>Need Additional Support?</strong>
+        To check your Device Number, software version, and customer support contact details, open <span style="color:#CC9C56; font-weight:700;">⚙ Settings → About Nour Alwelayah</span> on your appliance.
+      </div>
+    </section>
+  </article>
+
+</main>
+
+<script>
+  function setPageSize(size) {
+    var styleEl = document.getElementById('page-size-style');
+    var btnA5 = document.getElementById('btn-a5');
+    var btnA4 = document.getElementById('btn-a4');
+    if (size === 'A4') {
+      document.body.classList.add('layout-a4');
+      styleEl.textContent = '@page { size: A4 portrait; margin: 14mm 15mm 15mm 15mm; }';
+      btnA4.classList.add('active');
+      btnA5.classList.remove('active');
+    } else {
+      document.body.classList.remove('layout-a4');
+      styleEl.textContent = '@page { size: A5 portrait; margin: 11mm 10.5mm 12.5mm 10.5mm; }';
+      btnA5.classList.add('active');
+      btnA4.classList.remove('active');
+    }
+  }
+</script>
+</body>
+</html>

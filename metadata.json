@@ -1,0 +1,6 @@
+{
+  "name": "Nour Alwelayah",
+  "description": "Nour Alwelayah Islamic prayer clock, media appliance, and companion remote control for Android tablets, phones, and Amazon Fire OS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

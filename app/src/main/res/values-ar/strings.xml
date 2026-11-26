@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Appliance Identity -->
+    <string name="app_name">نور الولاية</string>
+    <string name="app_name_ar">نور الولاية</string>
+    <string name="kiosk_initializing">جاري تهيئة نظام نور الولاية...</string>
+
+    <!-- Hijri Months & Era -->
+    <string name="hijri_era_suffix">هـ</string>
+    <string-array name="hijri_months">
+        <item>محرم</item>
+        <item>صفر</item>
+        <item>ربيع الأول</item>
+        <item>ربيع الآخر</item>
+        <item>جمادى الأولى</item>
+        <item>جمادى الآخرة</item>
+        <item>رجب</item>
+        <item>شعبان</item>
+        <item>رمضان</item>
+        <item>شوال</item>
+        <item>ذو القعدة</item>
+        <item>ذو الحجة</item>
+    </string-array>
+
+    <!-- P4Tablet Bottom Navigation Tabs -->
+    <string name="tab_clock">الساعة</string>
+    <string name="tab_prayer">الصلاة</string>
+    <string name="tab_alarms">المنبهات</string>
+    <string name="tab_player">القارئ</string>
+    <string name="tab_wifi">الشبكة</string>
+    <string name="tab_settings">الإعدادات</string>
+
+    <!-- Clock Screen & Alerts -->
+    <string name="clock_am">ص</string>
+    <string name="clock_pm">م</string>
+    <string name="clock_media_link">الوسائط</string>
+    <string name="clock_set_location_prompt">اضبط موقعك من الإعدادات (الحالي: %1$s)</string>
+    <string name="clock_next_prayer_format">الصلاة القادمة: %1$s الساعة %2$s   (بعد %3$d س و %4$s د)</string>
+    <string name="alert_snooze">غفوة</string>
+    <string name="alert_snooze_min">غفوة %1$d د</string>
+
+    <!-- Prayer Names -->
+    <string name="prayer_fajr">الفجر</string>
+    <string name="prayer_sunrise">الشروق</string>
+    <string name="prayer_dhuhr">الظهر</string>
+    <string name="prayer_asr">العصر</string>
+    <string name="prayer_sunset">الغروب</string>
+    <string name="prayer_maghrib">المغرب</string>
+    <string name="prayer_next_prefix">الصلاة القادمة:</string>
+
+    <!-- Prayer Tab -->
+    <string name="prayer_no_azan">بدون أذان</string>
+    <string name="prayer_azan_toggle">الأذان</string>
+    <string name="prayer_azan_sounds_header">أصوات الأذان - الملفات في /azan</string>
+    <string name="prayer_add_sound">+ إضافة</string>
+    <string name="prayer_same_as_dhuhr">نفس أذان الظهر</string>
+    <string name="prayer_default_alarm_sound">الصوت الافتراضي</string>
+    <string name="prayer_azan_volume_label">صوت الأذان (0-21)</string>
+    <string name="prayer_start_early_label">تقديم الأذان (0-500 ث)</string>
+    <string name="prayer_method_angles">زوايا الطريقة</string>
+    <string name="prayer_fajr_angle_label">زاوية الفجر (14.0 - 19.9)</string>
+    <string name="prayer_maghrib_angle_label">زاوية المغرب (0.833 = الغروب)</string>
+    <string name="prayer_azan_picture">صورة الأذان</string>
+    <string name="prayer_save_settings">💾  حفظ إعدادات الصلاة</string>
+    <string name="prayer_saved_msg">تم الحفظ وتحديث أوقات الصلاة.</string>
+
+    <!-- Alarms Tab & Editor -->
+    <string name="alarms_header_hint">اضغط على أي منبه لتعديله. لكل منبه صوت ومستوى صوت خاص به.</string>
+    <string name="alarms_active_count_format">%1$d من أصل %2$d منبهاً مفعّلاً</string>
+    <string name="alarms_prev">◀ السابق</string>
+    <string name="alarms_next">التالي ▶</string>
+    <string name="alarms_page_format">صفحة %1$d / %2$d</string>
+    <string name="alarms_default_title_format">منبه %1$d</string>
+    <string name="alarms_editor_title_label">العنوان</string>
+    <string name="alarms_editor_when_label">الوقت</string>
+    <string name="alarms_editor_repeat_label">التكرار في الأيام (بدون تحديد = مرة واحدة)</string>
+    <string name="alarms_editor_ramadan_only">في شهر رمضان فقط (يعمل مع الأيام المحددة أعلاه)</string>
+    <string name="alarms_editor_specific_date">تاريخ محدد (يتجاهل الأيام ورمضان)</string>
+    <string name="alarms_editor_sound_label">الصوت (اضغط لاختيار ملف صوتي من مجلدات نور الولاية)</string>
+    <string name="alarms_editor_volume_label">مستوى الصوت لهذا المنبه (0-21)</string>
+    <string name="alarms_editor_save">✓ حفظ</string>
+    <string name="alarms_editor_cancel">✕ إلغاء</string>
+    <string name="alarms_editor_delete">🗑 حذف</string>
+
+    <!-- Player & Media Remote States -->
+    <string name="player_audios">الصوتيات</string>
+    <string name="player_videos">المرئيات</string>
+    <string name="player_youtube">يوتيوب</string>
+    <string name="player_now_playing">قيد التشغيل الآن</string>
+    <string name="player_stopped">متوقف</string>
+    <string name="player_ready_to_play">جاهز للتشغيل على الساعة</string>
+    <string name="player_volume">مستوى الصوت</string>
+    <string name="player_appliance_volume">مستوى صوت الساعة</string>
+    <string name="player_open_media">مشغل الوسائط</string>
+    <string name="player_play">تشغيل</string>
+    <string name="player_pause">إيقاف مؤقت</string>
+    <string name="player_next">التالي</string>
+    <string name="player_stop">إيقاف</string>
+    <string name="player_fullscreen_expand">ملء</string>
+    <string name="player_fullscreen_minimize">تصغير</string>
+    <string name="player_empty_folder">(مجلد فارغ)</string>
+    <string name="player_starting_retry">المشغل يبدأ الآن - حاول مرة أخرى</string>
+    <string name="error_media_recovering">تعذر تشغيل الوسائط — جاري العودة إلى الساعة...</string>
+
+    <!-- Wi-Fi & Bluetooth Remote Tab -->
+    <string name="wifi_title">الشبكة اللاسلكية (Wi-Fi)</string>
+    <string name="wifi_not_connected">غير متصل</string>
+    <string name="wifi_connected">متصل</string>
+    <string name="wifi_connecting">جاري الاتصال...</string>
+    <string name="wifi_disconnected">غير متصل</string>
+    <string name="wifi_scanning">جاري البحث...</string>
+    <string name="wifi_settings_button">📶  إعدادات الشبكة</string>
+    <string name="wifi_bt_remote_title">التحكم عبر البلوتوث</string>
+    <string name="wifi_refresh_button">⟳  تحديث</string>
+    <string name="wifi_no_router_title">وضع الاتصال المباشر (بدون راوتر)</string>
+    <string name="wifi_web_remote_title">التحكم عبر الشبكة (Wi-Fi)</string>
+    <string name="wifi_web_remote_on">تفعيل التحكم عبر الشبكة</string>
+    <string name="wifi_no_connection">لا يوجد اتصال بالشبكة</string>
+    <string name="wifi_pin_label">الرمز السري PIN (4 - 8 أرقام، فارغ = بدون)</string>
+    <string name="wifi_save_pin">حفظ الرمز</string>
+    <string name="wifi_manager_button">📶  إدارة شبكات الواي فاي</string>
+    <string name="wifi_manager_title">إدارة الشبكة اللاسلكية (Wi-Fi)</string>
+    <string name="wifi_quick_panel_button">⚙  لوحة الواي فاي السريعة</string>
+    <string name="wifi_ble_no_remotes">لا توجد أجهزة تحكم متصلة حالياً</string>
+    <string name="wifi_web_remote_header">التحكم عبر المتصفح</string>
+    <string name="wifi_web_remote_scan_hint">امسح الرمز بأي هاتف أو افتح الرابط على الكمبيوتر</string>
+
+    <!-- Settings Tab & Kiosk Section -->
+    <string name="settings_city_name">اسم المدينة</string>
+    <string name="settings_list_button">☰  القائمة</string>
+    <string name="settings_gps_button">⌖  GPS</string>
+    <string name="settings_online_button">⬇  بحث</string>
+    <string name="settings_latitude">خط العرض</string>
+    <string name="settings_longitude">خط الطول</string>
+    <string name="settings_time_zone">المنطقة الزمنية</string>
+    <string name="settings_custom_utc">منطقة زمنية مخصصة / UTC</string>
+    <string name="settings_calc_method">طريقة الحساب (زوايا الفجر / المغرب)</string>
+    <string name="settings_hijri_adjust">تعديل التاريخ الهجري (رؤية الهلال)</string>
+    <string name="settings_clock_picture">خلفية الساعة</string>
+    <string name="settings_language_label">اللغة / Language:</string>
+    <string name="settings_24h_clock">نظام ٢٤ ساعة</string>
+    <string name="settings_brightness">السطوع</string>
+    <string name="settings_auto">تلقائي</string>
+    <string name="settings_auto_checked">تلقائي ✓</string>
+    <string name="settings_auto_lock">القفل التلقائي</string>
+    <string name="settings_keep_screen_on">إبقاء الشاشة قيد التشغيل</string>
+    <string name="settings_save_button">💾  حفظ</string>
+    <string name="settings_saved_msg">تم الحفظ.</string>
+    <string name="settings_this_device">هذا الجهاز</string>
+    <string name="settings_bt_name_label">اسم البلوتوث:</string>
+    <string name="settings_bt_name_hint">معرّف البلوتوث الخاص بالجهاز للاتصال بتطبيق التحكم عن بعد (نور الولاية).</string>
+    <string name="settings_clock_pictures_section">خلفيات وصور الساعة</string>
+    <string name="settings_kiosk_section">وضع الكشك (قفل الجهاز)</string>
+    <string name="settings_kiosk_refresh">تحديث الحالة</string>
+    <string name="settings_maintainer_unlock">فتح قفل الصيانة</string>
+
+    <!-- Technician Admin Dashboard -->
+    <string name="admin_auth_title">مصادقة الفني المختص</string>
+    <string name="admin_auth_subtitle">أدخل الرمز السري للفني لفتح لوحة التحكم بنظام نور الولاية</string>
+    <string name="admin_auth_enter_pin">أدخل الرمز السري</string>
+    <string name="admin_auth_incorrect_pin">الرمز السري غير صحيح</string>
+    <string name="admin_auth_cancel">إلغاء</string>
+    <string name="admin_auth_unlock">فتح القفل</string>
+
+    <string name="admin_portal_title">لوحة تحكم فني نور الولاية</string>
+    <string name="admin_portal_subtitle">إعداد الجهاز الميداني والتحكم بوضع الكشك • الإصدار 2.0</string>
+    <string name="admin_close_exit">إغلاق / خروج</string>
+
+    <string name="admin_language_title">لغة واجهة الجهاز (ثنائي اللغة / RTL)</string>
+    <string name="admin_language_subtitle">التبديل الفوري بين اللغة العربية والإنجليزية واتجاه الواجهة بدون إعادة تشغيل.</string>
+    <string name="admin_lang_en">English (LTR)</string>
+    <string name="admin_lang_ar">العربية (RTL)</string>
+    <string name="admin_lang_switched_en">Language switched to English (LTR).</string>
+    <string name="admin_lang_switched_ar">تم تغيير لغة الجهاز إلى العربية (RTL).</string>
+
+    <string name="admin_kiosk_title">القفل الرئيسي للجهاز (وضع الكشك)</string>
+    <string name="admin_kiosk_subtitle">تفعيل أو إيقاف تثبيت الشاشة وقيود مسؤول الجهاز. عند الإيقاف يتم تحرير الجهاز للصيانة.</string>
+    <string name="admin_kiosk_active">وضع الكشك: مفعّل (الجهاز مقفل)</string>
+    <string name="admin_kiosk_disabled">وضع الكشك: معطّل (وضع الصيانة والخدمة)</string>
+    <string name="admin_device_owner_yes">صلاحية مالك الجهاز مفعّلة</string>
+    <string name="admin_device_owner_no">الوضع القياسي (غير مفعّل كمالك جهاز)</string>
+
+    <string name="admin_wifi_title">إعدادات شبكة الواي فاي (Wi-Fi)</string>
+    <string name="admin_wifi_subtitle">فتح إعدادات الشبكة اللاسلكية للنظام (مسموح بها داخل وضع القفل).</string>
+    <string name="admin_wifi_panel">لوحة إعدادات الواي فاي للنظام</string>
+    <string name="admin_wifi_button">إعداد الواي فاي</string>
+
+    <string name="admin_ota_title">خادم التحديثات الهوائية (OTA)</string>
+    <string name="admin_ota_subtitle">تحديد رابط الخادم السحابي لتحديثات النظام والملفات الصوتية والمرئية.</string>
+    <string name="admin_ota_label">رابط خادم OTA</string>
+    <string name="admin_ota_save">حفظ الرابط</string>
+
+    <string name="admin_volume_title">محدد مستوى الصوت الأقصى</string>
+    <string name="admin_volume_subtitle" formatted="false">تقييد الحد الأقصى لمستوى الصوت المسموح به على الجهاز (0% – 100%).</string>
+    <string name="admin_volume_max_label" formatted="false">الحد %</string>
+    <string name="admin_volume_apply">تطبيق</string>
+
+    <string name="admin_pin_title">الرمز السري للفني وتشخيص حالة الجهاز</string>
+    <string name="admin_pin_subtitle">تحديث الرمز السري (الافتراضي: 9200) وعرض تقرير سياسات الأمان.</string>
+    <string name="admin_pin_label">الرمز السري للفني</string>
+    <string name="admin_pin_update">تحديث الرمز</string>
+
+    <!-- Voice Assistant Overlay -->
+    <string name="voice_mic_content_description">المساعد الصوتي</string>
+    <string name="voice_assistant_title">المساعد الصوتي</string>
+    <string name="voice_listening">جاري الاستماع…</string>
+    <string name="voice_listening_hint">تحدث بالعربية أو الإنجليزية</string>
+    <string name="voice_processing">جاري المعالجة…</string>
+    <string name="voice_speaking">جاري التحدث</string>
+    <string name="voice_done_closing">جاري العودة إلى الساعة…</string>
+    <string name="voice_recognized_query_label">العبارة المسموعة</string>
+    <string name="voice_cancel">إلغاء</string>
+    <string name="voice_stop_dismiss">إيقاف / إغلاق</string>
+    <string name="voice_dismiss">إغلاق</string>
+    <string name="voice_retry">إعادة المحاولة</string>
+    <string name="voice_source_ref_label">المصدر</string>
+    <string name="voice_error_title">المساعد الصوتي</string>
+    <string name="voice_did_you_mean">هل تقصد:</string>
+    <string name="voice_learned_badge">عبارة متعلّمة</string>
+    <string name="voice_listening_wake_word">بانتظار كلمة: ولاية</string>
+</resources>

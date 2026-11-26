@@ -1,0 +1,26 @@
+# Local configuration & secrets (sdk.dir, keystore passwords, OTA_TELEMETRY_SECRET)
+local.properties
+/local.properties
+keystore.properties
+.env
+
+# Signing keystores - never commit private keys
+*.jks
+*.keystore
+
+# Build & Gradle caches
+build/
+app/build/
+.gradle/
+.kotlin/
+.build-outputs/
+.cxx/
+/captures
+
+# IDE files
+.idea/
+/.idea
+*.iml
+
+# Large local media bundles (>100 MB .mp4/audio assets injected locally during release builds)
+app/src/main/assets/NourAlwelayah/
